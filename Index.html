@@ -1,0 +1,2439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- REQUIRED META TAGS -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>mintwint</title>
+    <!--- MAIN CSS ---->
+    <!-- <link rel="stylesheet" href="assets/css/input.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/output.css" />
+
+</head>
+
+<body class="bg-white font-inter box-border overflow-x-hidden">
+    <!--navbar-->
+    <nav class="w-full fixed z-[9999] top-0 left-0 bg-white ">
+        <div class="w-full max-w-[1204px] mx-auto flex items-center justify-between px-4 lg:px-8 py-[15px]">
+            <!-- Logo -->
+            <div>
+                <a href="#">
+                    <!-- Your SVG Logo -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="146" height="38" viewBox="0 0 146 38" fill="none">
+                        <path
+                            d="M58.0422 13.39C60.9856 13.39 62.9652 15.4556 62.9652 18.7658V26.975H60.152V18.9511C60.152 17.0974 59.1622 16.0647 57.6254 16.0647C55.9584 16.0647 54.7863 17.1504 54.7863 19.5602V26.975H51.9732V18.9511C51.9732 17.0974 51.0615 16.0647 49.5247 16.0647C47.9358 16.0647 46.6334 17.1504 46.6334 19.5602V26.975H43.8203V13.7343H46.6334V15.3232C47.467 14.0256 48.7433 13.39 50.3582 13.39C52.0513 13.39 53.3016 14.158 54.057 15.4821C54.9165 14.105 56.297 13.39 58.0422 13.39Z"
+                            fill="#002225" />
+                        <path
+                            d="M67.3824 11.7482C66.3926 11.7482 65.5852 10.9008 65.5852 9.92097C65.5852 8.91467 66.3926 8.09375 67.3824 8.09375C68.3722 8.09375 69.1797 8.91467 69.1797 9.92097C69.1797 10.9008 68.3722 11.7482 67.3824 11.7482ZM65.9759 26.975V13.7343H68.789V26.975H65.9759Z"
+                            fill="#002225" />
+                        <path
+                            d="M78.9058 13.39C81.8231 13.39 83.9069 15.4026 83.9069 18.8452V26.975H81.0938V19.1365C81.0938 17.1239 79.9477 16.0647 78.1765 16.0647C76.3271 16.0647 74.8684 17.1769 74.8684 19.878V26.975H72.0553V13.7343H74.8684V15.4291C75.728 14.0521 77.1346 13.39 78.9058 13.39Z"
+                            fill="#002225" />
+                        <path
+                            d="M94.2032 16.4884H90.9733V22.8439C90.9733 24.5387 92.0673 24.5122 94.2032 24.4063V26.975C89.8793 27.5046 88.1601 26.2865 88.1601 22.8439V16.4884H85.7638V13.7343H88.1601V10.8743L90.9733 10.0269V13.7343H94.2032V16.4884Z"
+                            fill="#002225" />
+                        <path
+                            d="M111.885 13.7343H114.854L110.765 26.975H108.004L105.295 18.0508L102.56 26.975H99.7991L95.7096 13.7343H98.679L101.206 22.8704L103.941 13.7343H106.624L109.332 22.8704L111.885 13.7343Z"
+                            fill="#002225" />
+                        <path
+                            d="M118.333 11.7482C117.343 11.7482 116.535 10.9008 116.535 9.92097C116.535 8.91467 117.343 8.09375 118.333 8.09375C119.322 8.09375 120.13 8.91467 120.13 9.92097C120.13 10.9008 119.322 11.7482 118.333 11.7482ZM116.926 26.975V13.7343H119.739V26.975H116.926Z"
+                            fill="#002225" />
+                        <path
+                            d="M129.856 13.39C132.773 13.39 134.857 15.4026 134.857 18.8452V26.975H132.044V19.1365C132.044 17.1239 130.898 16.0647 129.127 16.0647C127.277 16.0647 125.819 17.1769 125.819 19.878V26.975H123.006V13.7343H125.819V15.4291C126.678 14.0521 128.085 13.39 129.856 13.39Z"
+                            fill="#002225" />
+                        <path
+                            d="M145.153 16.4884H141.923V22.8439C141.923 24.5387 143.017 24.5122 145.153 24.4063V26.975C140.829 27.5046 139.11 26.2865 139.11 22.8439V16.4884H136.714V13.7343H139.11V10.8743L141.923 10.0269V13.7343H145.153V16.4884Z"
+                            fill="#002225" />
+                        <path
+                            d="M0 8.1481C0 3.64803 3.64803 0 8.1481 0H29.8518C34.3519 0 37.9999 3.64803 37.9999 8.1481V29.8519C37.9999 34.352 34.3519 38 29.8518 38H8.1481C3.64803 38 0 34.352 0 29.8519V8.1481Z"
+                            fill="#004046" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M25.7209 10.4779L19.8453 16.3535V8.17578C22.0558 8.3463 24.0805 9.17987 25.7209 10.4779ZM18.1545 8.17578V18.0443L10.4947 25.7041C9.03291 23.8567 8.16016 21.5218 8.16016 18.9831C8.16016 13.2809 12.563 8.60712 18.1545 8.17578ZM11.6445 26.9455C13.5769 28.7316 16.161 29.8229 18.9999 29.8229C22.8578 29.8229 26.2451 27.8075 28.1661 24.7721H13.8179L11.6445 26.9455ZM29.0382 23.0813H15.5087L26.9623 11.6276C28.7483 13.5601 29.8397 16.1442 29.8397 18.9831C29.8397 20.4333 29.5549 21.817 29.0382 23.0813Z"
+                            fill="#0CF279" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="toggle-menu hidden lg:flex items-center gap-10">
+                <li><a href="#"
+                        class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">Discover</a>
+                </li>
+                <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">About
+                        Us</a></li>
+                <li><a href="#"
+                        class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">Pricing</a>
+                </li>
+                <li><a href="#"
+                        class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">Affiliate</a>
+                </li>
+            </ul>
+
+            <!-- Desktop Buttons -->
+            <div class="hidden lg:flex items-center gap-4">
+                <button class="btn-outline" data-modal-target="Sign_up">Sign up</button>
+                <button class="btn-mint" data-modal-target="Sign_In">Login</button>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-toggle" class="lg:hidden flex flex-col gap-1">
+                <span class="w-6 h-0.5 bg-black"></span>
+                <span class="w-6 h-0.5 bg-black"></span>
+                <span class="w-6 h-0.5 bg-black"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex-col bg-white px-6 py-4 lg:hidden">
+            <ul class="flex flex-col items-center gap-4">
+                <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">Discover</a></li>
+                <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">About Us</a></li>
+                <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">Pricing</a></li>
+                <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">Affiliate</a></li>
+            </ul>
+            <div class="flex flex-col gap-3 mt-4">
+                <button class="btn-outline" data-modal-target="Sign_up">Sign up</button>
+                <button class="btn-mint" data-modal-target="Sign_In">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero w-full h-auto pt-[72px] lg:h-auto">
+        <div
+            class="w-full h-auto max-w-[1460px] rounded-3xl mx-auto bg-linear-to-b from-[#EAF1F1] to-white/0 max-lg:py-16 p-3.5 flex flex-col lg:flex-row items-center justify-center lg:justify-end lg:gap-[135px]">
+            <!-- left part  -->
+            <div class="w-full h-full lg:max-w-[675px] flex flex-col justify-center">
+                <!-- badge  -->
+                <div
+                    class="py-2 pl-[13px] pr-[18px] w-max mb-6 flex items-center gap-2 bg-white rounded-full shadow-[0_0_10px_0_rgba(23,23,35,0.04)] max-lg:mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                        <circle cx="4" cy="4" r="4" fill="#0AF573" />
+                    </svg>
+                    <p class="text-xs font-medium leading-[18px] text-[#002225] ">
+                        Preferred by <span class="text-[#00CF7F]"> 3k+</span> Designer and Developer
+                    </p>
+                </div>
+                <h1
+                    class="text-[58px] font-medium leading-[76px] tracking-[-2px] text-[#002225] max-lg:text-center max-lg:max-w-[650px] max-lg:mx-auto">
+                    Create Stunning
+                    Websites
+                    in Minutes in <span id="text">Webflow</span>
+                </h1>
+                <p
+                    class="text-base leading-[26px] text-[#6B7280] mt-2.5 mb-[34px] w-full max-w-[531px] max-lg:mx-auto max-lg:text-center">
+                    Transform Your Workflow with Our Premium Figma, Webflow, & Framer
+                    Components. Build Better, Faster
+                </p>
+                <div class="flex items-center gap-3.5 mb-12 max-lg:justify-center">
+                    <button
+                        class="py-3.5 px-5 rounded-lg bg-[#004046] text-base font-medium leading-5 text-[#0CF279] transition-all duration-500 hover:bg-[#05575f]">Discover
+                        Components</button>
+                    <button
+                        class="py-3.5 px-5 rounded-lg text-[#002225] text-base font-medium leading-5 bg-[#0CF279] transition-all duration-500 hover:bg-[#0adf6d]">Become
+                        a PRO</button>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center gap-3.5">
+                    <div class="flex items-center -space-x-5">
+                        <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_4984_3076)">
+                                <rect x="5" y="3" width="44" height="44" rx="22" fill="white" />
+                                <rect x="5.5" y="3.5" width="43" height="43" rx="21.5" stroke="#D5E3E3" />
+                            </g>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M37.3543 18.543L30.7472 31.4581H24.5419L27.3066 26.1055H27.1821C24.9011 29.0668 21.4976 31.0158 16.6484 31.4581V26.1798C16.6484 26.1798 19.7506 25.9963 21.574 24.0789H16.6495V18.543H22.1855V23.0962H22.31L24.5724 18.543H28.7588V23.0678H28.8833L31.2309 18.543H37.3543Z"
+                                fill="#146EF5" />
+                            <defs>
+                                <filter id="filter0_d_4984_3076" x="0.2" y="0.2" width="53.6" height="53.6"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="2" />
+                                    <feGaussianBlur stdDeviation="2.4" />
+                                    <feComposite in2="hardAlpha" operator="out" />
+                                    <feColorMatrix type="matrix"
+                                        values="0 0 0 0 0.0901961 0 0 0 0 0.0901961 0 0 0 0 0.137255 0 0 0 0.04 0" />
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                        result="effect1_dropShadow_4984_3076" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4984_3076"
+                                        result="shape" />
+                                </filter>
+                            </defs>
+                        </svg>
+                        <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_4984_3080)">
+                                <rect x="5" y="3" width="44" height="44" rx="22" fill="white" />
+                                <rect x="5.5" y="3.5" width="43" height="43" rx="21.5" stroke="#D5E3E3" />
+                            </g>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.7539 28.4531H27.0009V35.3551L19.7539 28.4531Z" fill="#0055FF" />
+                            <path d="M27.0009 21.5508H19.7539V28.4527H34.2479L27.0009 21.5508Z" fill="#00AAFF" />
+                            <path d="M19.7578 14.6484L27.0048 21.5504H34.2518V14.6484H19.7578Z" fill="#88DDFF" />
+                            <defs>
+                                <filter id="filter0_d_4984_3080" x="0.2" y="0.2" width="53.6" height="53.6"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="2" />
+                                    <feGaussianBlur stdDeviation="2.4" />
+                                    <feComposite in2="hardAlpha" operator="out" />
+                                    <feColorMatrix type="matrix"
+                                        values="0 0 0 0 0.0901961 0 0 0 0 0.0901961 0 0 0 0 0.137255 0 0 0 0.04 0" />
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                        result="effect1_dropShadow_4984_3080" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4984_3080"
+                                        result="shape" />
+                                </filter>
+                            </defs>
+                        </svg>
+                        <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_4984_3087)">
+                                <rect x="5" y="3" width="44" height="44" rx="22" fill="white" />
+                                <rect x="5.5" y="3.5" width="43" height="43" rx="21.5" stroke="#D5E3E3" />
+                            </g>
+                            <g clip-path="url(#clip0_4984_3087)">
+                                <path
+                                    d="M27.0312 25.0017C27.0312 23.0958 28.5763 21.5508 30.4822 21.5508C32.3881 21.5508 33.9332 23.0959 33.9332 25.0017C33.9332 26.9077 32.3881 28.4527 30.4822 28.4527C28.5763 28.4527 27.0312 26.9077 27.0312 25.0017Z"
+                                    fill="#00BCFF" />
+                                <path
+                                    d="M20.125 31.9063C20.125 30.0004 21.6701 28.4553 23.576 28.4553L25.415 27.4844L27.0269 28.4553V31.9063C27.0269 33.8122 25.4819 35.3573 23.576 35.3573C21.6701 35.3573 20.125 33.8122 20.125 31.9063Z"
+                                    fill="#00CF7F" />
+                                <path
+                                    d="M27.0263 14.6484L25.1484 17.9108L27.0263 21.5504H30.4288C32.3348 21.5504 33.8798 20.0053 33.8798 18.0994C33.8798 16.1935 32.3348 14.6484 30.4288 14.6484H27.0263Z"
+                                    fill="#FF7361" />
+                                <path
+                                    d="M20.0781 18.0994C20.0781 20.0053 21.6232 21.5504 23.5291 21.5504L25.3597 22.2574L27.0285 21.5504V14.6484H23.5291C21.6232 14.6484 20.0781 16.1935 20.0781 18.0994Z"
+                                    fill="#FF4D12" />
+                                <path
+                                    d="M20.125 25.0018C20.125 26.9077 21.6701 28.4528 23.576 28.4528H27.0269V21.5508H23.576C21.6701 21.5508 20.125 23.0959 20.125 25.0018Z"
+                                    fill="#B659FF" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_4984_3087" x="0.2" y="0.2" width="53.6" height="53.6"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="2" />
+                                    <feGaussianBlur stdDeviation="2.4" />
+                                    <feComposite in2="hardAlpha" operator="out" />
+                                    <feColorMatrix type="matrix"
+                                        values="0 0 0 0 0.0901961 0 0 0 0 0.0901961 0 0 0 0 0.137255 0 0 0 0.04 0" />
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                        result="effect1_dropShadow_4984_3087" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4984_3087"
+                                        result="shape" />
+                                </filter>
+                                <clipPath id="clip0_4984_3087">
+                                    <rect width="20.7059" height="20.7059" fill="white"
+                                        transform="translate(16.6484 14.6484)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </div>
+                    <p class="text-base font-medium leading-5 text-[#002225] max-lg:text-center">Largest Library of
+                        Webflow, Framer and
+                        Figma Components</p>
+                </div>
+            </div>
+            <!-- right part  -->
+            <div class="hidden lg:block w-full h-auto max-w-[476px] rounded-t-[16px]">
+                <img src="assets/images/Top Bar.png" alt="" class="w-full h-auto rounded-t-[16px]">
+                <div class="bg-white w-full px-[7px] h-auto relative overflow-hidden pb-12">
+                    <div class="swiper hero-slider relative">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="assets/images/hero-slide-1-1.png" alt=""
+                                    class="w-full h-auto slide-img opacity-100">
+                                <img src="assets/images/hero-slide-1-2.png" alt=""
+                                    class="w-full h-auto slide-img opacity-100">
+                                <img src="assets/images/hero-slide-1-3.png" alt=""
+                                    class="w-full h-auto slide-img opacity-100">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/hero-slide-2-1.jpg" alt=""
+                                    class="w-full h-auto slide-img opacity-100">
+                                <img src="assets/images/hero-slide-2-2.jpg" alt=""
+                                    class="w-full h-auto slide-img opacity-100">
+                                <img src="assets/images/hero-slide-2-3.jpg" alt=""
+                                    class="w-full h-auto slide-img opacity-100">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/hero-slide-3-1.png" alt=""
+                                    class="w-full h-auto slide-img opacity-100">
+                                <img src="assets/images/hero-slide-3-2.png" alt=""
+                                    class="w-full h-auto slide-img opacity-100">
+                                <img src="assets/images/hero-slide-3-3.png" alt=""
+                                    class="w-full h-auto slide-img opacity-100">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute -bottom-6 left-0 w-full h-28 bg-gradient-to-t from-white via-white/60 to-white/0 z-30">
+                        </div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-next ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+                                fill="none">
+                                <path d="M22.5 7C19.5 7 14 7 12 12.5C10 18 5.5 18 2.5 18" stroke="#002225"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M20.5 5C20.5 5 21.719 6.21895 22.5 7C21.719 7.78105 20.5 9 20.5 9"
+                                    stroke="#002225" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M22.5 18C19.5 18 14 18 12 12.5C10 6.99999 5.5 7.00001 2.5 7" stroke="#002225"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M20.5 20C20.5 20 21.719 18.781 22.5 18C21.719 17.219 20.5 16 20.5 16"
+                                    stroke="#002225" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            Shuffle
+                        </div>
+
+                        <!-- If we need scrollbar -->
+                        <!--     <div class="swiper-scrollbar"></div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mark Tag -->
+            <div id="mark-tag"
+                class="hidden lg:flex absolute left-[50%] z-50 items-center gap-2.5 py-2.5 pr-5 pl-3.5 text-base leading-[18px] bg-[#00AAFF] text-white font-medium rounded-full shadow-lg">
+                <svg class="absolute -rotate-6 -left-2.5 -top-2" width="17" height="18" viewBox="0 0 17 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.5022 5.969C16.7068 6.45822 16.6149 8.19352 15.3653 8.55272L9.05999 10.3652L6.18019 16.26C5.60945 17.4282 3.88448 17.2174 3.61189 15.9462L0.676261 2.25588C0.445871 1.18146 1.51159 0.287224 2.52968 0.700684L15.5022 5.969Z"
+                        fill="#00AAFF" />
+                </svg>
+                Mark <span class="text-xs leading-[18px] opacity-80">Framer Expert</span>
+            </div>
+
+            <!-- Rubi Tag -->
+            <div id="rubi-tag"
+                class="hidden lg:flex absolute left-3/4 z-50 items-center gap-2.5 py-2.5 pr-5 pl-3.5 text-base leading-[18px] bg-[#FF8A00] text-white font-medium rounded-full shadow-lg">
+                <svg class="absolute -rotate-6 -left-2.5 -top-2" width="17" height="18" viewBox="0 0 17 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.5022 5.969C16.7068 6.45822 16.6149 8.19352 15.3653 8.55272L9.05999 10.3652L6.18019 16.26C5.60945 17.4282 3.88448 17.2174 3.61189 15.9462L0.676261 2.25588C0.445871 1.18146 1.51159 0.287224 2.52968 0.700684L15.5022 5.969Z"
+                        fill="#FF8A00" />
+                </svg>
+                Rubi <span class="text-xs leading-[18px] opacity-80">Webflow Pro</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Copy, Paste, Create. -->
+    <div class="pt-28 pb-16 w-full">
+        <div class="w-full max-w-[1204px] mx-auto px-8">
+            <div class="flex flex-col lg:flex-row items-center max-lg:gap-8 lg:items-end justify-between mb-14">
+                <div class="block">
+                    <h2 class="text-[44px] leading-[54px] font-medium text-[#002225] mb-4 max-lg:text-center">Copy,
+                        Paste, <span class="text-[#2DC38C]"> Create.</span></h2>
+                    <p class="text-base leading-5 text-[#002225] max-lg:text-center">
+                        Skip starting from scratch - just explore components, copy in a click, and paste into your
+                        design for instant results.
+                    </p>
+                </div>
+                <button
+                    class="py-3.5 px-5 rounded-lg bg-[#004046] text-base font-medium leading-5 text-[#0CF279] transition-all duration-500 hover:bg-[#05575f]">
+                    Explore More
+                </button>
+            </div>
+            <div class="grid grid-cols-1 max-md:max-w-[550px] mx-auto md:grid-cols-3 gap-[30px]">
+                <div class="rounded-[14px] border border-[#E7E9EE] bg-white p-1">
+                    <img src="assets/images/card-1.png" alt="">
+                    <div class="pt-6 pb-5">
+                        <h4 class="text-base font-semibold leading-[26px] text-[#002225] text-center">Explore Components
+                        </h4>
+                        <p class="mt-1 text-sm leading-5 text-[#405557] text-center">Browse ready to use designs</p>
+                    </div>
+                </div>
+                <div class="rounded-[14px] border border-[#E7E9EE] bg-white p-1">
+                    <img src="assets/images/card-2.png" alt="">
+                    <div class="pt-6 pb-5">
+                        <h4 class="text-base font-semibold leading-[26px] text-[#002225] text-center">Copy Component
+                        </h4>
+                        <p class="mt-1 text-sm leading-5 text-[#405557] text-center">Copy instantly with one click</p>
+                    </div>
+                </div>
+                <div class="rounded-[14px] border border-[#E7E9EE] bg-white p-1">
+                    <img src="assets/images/card-3.png" alt="">
+                    <div class="pt-6 pb-5">
+                        <h4 class="text-base font-semibold leading-[26px] text-[#002225] text-center">Paste inside
+                            Project</h4>
+                        <p class="mt-1 text-sm leading-5 text-[#405557] text-center">Drop directly into your workflow
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newest Components -->
+    <div class="pt-16 pb-28 w-full">
+        <div class="w-full max-w-[1204px] mx-auto px-8">
+            <div class="flex flex-col lg:flex-row items-center lg:items-end justify-between mb-9">
+                <div class="block">
+                    <div class="flex items-center max-lg:justify-center gap-2.5">
+                        <div class="flex items-center -space-x-5">
+                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d_4984_3212)">
+                                    <rect x="5" y="3" width="34" height="34" rx="12" fill="white" />
+                                    <rect x="5.5" y="3.5" width="33" height="33" rx="11.5" stroke="#D5E3E3" />
+                                </g>
+                                <path
+                                    d="M22.0195 20.0026C22.0195 18.5298 23.2134 17.3359 24.6862 17.3359C26.1589 17.3359 27.3528 18.5299 27.3528 20.0026C27.3528 21.4754 26.1589 22.6693 24.6862 22.6693C23.2134 22.6693 22.0195 21.4753 22.0195 20.0026Z"
+                                    fill="#00BCFF" />
+                                <path
+                                    d="M16.6875 25.331C16.6875 23.8582 17.8814 22.6643 19.3542 22.6643L20.7753 21.9141L22.0208 22.6643V25.331C22.0208 26.8038 20.8269 27.9977 19.3542 27.9977C17.8814 27.9977 16.6875 26.8037 16.6875 25.331Z"
+                                    fill="#00CF7F" />
+                                <path
+                                    d="M22.0175 12L20.5664 14.5209L22.0175 17.3333H24.6467C26.1195 17.3333 27.3134 16.1394 27.3134 14.6667C27.3134 13.1939 26.1195 12 24.6467 12H22.0175Z"
+                                    fill="#FF7361" />
+                                <path
+                                    d="M16.6484 14.6667C16.6484 16.1394 17.8423 17.3333 19.3151 17.3333L20.7297 17.8797L22.0192 17.3333V12H19.3151C17.8423 12 16.6484 13.1939 16.6484 14.6667Z"
+                                    fill="#FF4D12" />
+                                <path
+                                    d="M16.6875 20.0026C16.6875 21.4754 17.8814 22.6693 19.3542 22.6693H22.0208V17.3359H19.3542C17.8814 17.3359 16.6875 18.5299 16.6875 20.0026Z"
+                                    fill="#B659FF" />
+                                <defs>
+                                    <filter id="filter0_d_4984_3212" x="0.2" y="0.2" width="43.6" height="43.6"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                        <feOffset dy="2" />
+                                        <feGaussianBlur stdDeviation="2.4" />
+                                        <feComposite in2="hardAlpha" operator="out" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0.0901961 0 0 0 0 0.0901961 0 0 0 0 0.137255 0 0 0 0.04 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                            result="effect1_dropShadow_4984_3212" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4984_3212"
+                                            result="shape" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d_4984_3221)">
+                                    <rect x="5" y="3" width="34" height="34" rx="12" fill="white" />
+                                    <rect x="5.5" y="3.5" width="33" height="33" rx="11.5" stroke="#D5E3E3" />
+                                </g>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M30 15.0078L24.8945 24.9877H20.0995L22.2358 20.8516H22.1396C20.377 23.1399 17.7471 24.6459 14 24.9877V20.909C14 20.909 16.3971 20.7672 17.8061 19.2856H14.0008V15.0078H18.2786V18.5262H18.3748L20.1231 15.0078H23.358V18.5043H23.4542L25.2683 15.0078H30Z"
+                                    fill="#146EF5" />
+                                <defs>
+                                    <filter id="filter0_d_4984_3221" x="0.2" y="0.2" width="43.6" height="43.6"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                        <feOffset dy="2" />
+                                        <feGaussianBlur stdDeviation="2.4" />
+                                        <feComposite in2="hardAlpha" operator="out" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0.0901961 0 0 0 0 0.0901961 0 0 0 0 0.137255 0 0 0 0.04 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                            result="effect1_dropShadow_4984_3221" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4984_3221"
+                                            result="shape" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d_4984_3225)">
+                                    <rect x="5" y="3" width="34" height="34" rx="12" fill="white" />
+                                    <rect x="5.5" y="3.5" width="33" height="33" rx="11.5" stroke="#D5E3E3" />
+                                </g>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16.3984 22.6641H21.9984V27.9974L16.3984 22.6641Z" fill="#0055FF" />
+                                <path d="M21.9984 17.3359H16.3984V22.6692H27.5983L21.9984 17.3359Z" fill="#00AAFF" />
+                                <path d="M16.3984 12L21.9984 17.3333H27.5983V12H16.3984Z" fill="#88DDFF" />
+                                <defs>
+                                    <filter id="filter0_d_4984_3225" x="0.2" y="0.2" width="43.6" height="43.6"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                        <feOffset dy="2" />
+                                        <feGaussianBlur stdDeviation="2.4" />
+                                        <feComposite in2="hardAlpha" operator="out" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0.0901961 0 0 0 0 0.0901961 0 0 0 0 0.137255 0 0 0 0.04 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                            result="effect1_dropShadow_4984_3225" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4984_3225"
+                                            result="shape" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p class="text-base font-normal leading-5 text-[#002225] max-lg:text-center">
+                            Explore, copy & paste components into your project
+                        </p>
+                    </div>
+                    <h2
+                        class="text-[44px] leading-[54px] font-medium text-[#002225] mt-2 max-w-[664px] max-lg:text-center">
+                        Newest Components for Figma,
+                        Framer & Webflow
+                    </h2>
+
+                </div>
+                <button
+                    class="py-3.5 px-5 max-lg:mt-4 rounded-lg bg-[#004046] text-base font-medium leading-5 text-[#0CF279] transition-all duration-500 hover:bg-[#05575f]">
+                    Explore More
+                </button>
+            </div>
+
+            <div class="w-full ">
+                <!-- Tabs -->
+                <div class="flex mb-14 items-center gap-3.5 flex-wrap max-lg:justify-center">
+
+                    <button class="tab-btn categories_Btn active" data-tab="Hero">Hero</button>
+                    <button class="tab-btn categories_Btn" data-tab="Integrations">Integrations</button>
+                    <button class="tab-btn categories_Btn" data-tab="About">About Us</button>
+                    <button class="tab-btn categories_Btn" data-tab="How">How it work</button>
+                    <button class="tab-btn categories_Btn" data-tab="Navbar">Navbar & Megamenu</button>
+                    <button class="tab-btn categories_Btn" data-tab="Feature">Feature</button>
+                    <button class="tab-btn categories_Btn" data-tab="Client">Client</button>
+                    <button class="tab-btn categories_Btn" data-tab="Testimonials">Testimonials</button>
+                    <button class="tab-btn categories_Btn" data-tab="Team">Team</button>
+                    <button class="tab-btn categories_Btn" data-tab="Price">Price Plan</button>
+                    <button class="tab-btn categories_Btn" data-tab="Blog">Blog & News</button>
+                    <button class="tab-btn categories_Btn" data-tab="Productover">Product Overview</button>
+                    <a href="components.html" class="tab-btn categories_Btn">13+ See More</a>
+                </div>
+                <!-- Tab Contents -->
+                <div class="w-full">
+                    <div id="Hero" class="tab-content w-full">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-[30px]">
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-1.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-2.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-3.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-4.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-5.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-6.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Integrations" class="tab-content hidden">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-[30px]">
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-1.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-2.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-3.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-4.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-5.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-6.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="About" class="tab-content hidden">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-[30px]">
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-1.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-2.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-3.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-4.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-5.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-6.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="How" class="tab-content hidden">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-[30px]">
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-1.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-2.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-3.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-4.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-5.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-6.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Navbar" class="tab-content hidden">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-[30px]">
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-1.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-2.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-3.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-4.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-5.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-6.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Feature" class="tab-content hidden">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-[30px]">
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-1.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-2.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-3.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-4.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-5.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-6.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Client" class="tab-content hidden">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-[30px]">
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-1.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-2.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-3.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-4.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-5.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-6.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Testimonials" class="tab-content hidden">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-[30px]">
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-1.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-2.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-3.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-4.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-5.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-6.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Team" class="tab-content hidden">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-[30px]">
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-1.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-2.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-3.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-4.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-5.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-6.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Price" class="tab-content hidden">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-[30px]">
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-1.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-2.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-3.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-4.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-5.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-6.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Blog" class="tab-content hidden">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-[30px]">
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-1.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-2.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-3.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-4.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-5.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-6.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Productover" class="tab-content hidden">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-[30px]">
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-1.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-2.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-3.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-4.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-5.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                            <a href="#" class="w-full group">
+                                <div class="w-full h-auto overflow-hidden rounded-[10px]">
+                                    <img src="assets/images/tab-hero-6.png" alt=""
+                                        class="w-full h-auto transition-all duration-500 group-hover:scale-[1.03]">
+                                </div>
+                                <div class="block mt-3">
+                                    <h5 class="text-base font-semibold leading-5 text-[#002225] mb-1.5">Hero section
+                                        with three card layout</h5>
+                                    <p class="text-sm font-normal leading-[17px] text-[#6B7280] mb-1.5">Use this example
+                                        with heading, CTA buttons</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- What people say  -->
+    <div
+        class="w-full py-28 bg-[linear-gradient(180deg,rgba(234,241,241,0.5)_0%,rgba(255,255,255,0)_100%)] rounded-3xl">
+        <div class="w-full max-w-[1204px] mx-auto px-8">
+            <div class="w-full mb-14">
+                <h2 class="text-[44px] leading-[54px] font-medium text-[#002225] mb-4 max-lg:text-center">What People
+                    <span class="text-[#2DC38C]"> Say</span>
+                </h2>
+                <p class="text-base leading-5 text-[#002225] max-lg:text-center">
+                    Hear from real users who simplified their work with MintWint automation.
+                </p>
+            </div>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto max-w-md md:max-w-3xl lg:max-w-full gap-[30px]">
+                <div
+                    class="p-6 rounded-3xl  bg-[#00222505] flex justify-between flex-col transition-all duration-500 hover:bg-[#0022250A]">
+                    <div class="w-full mb-6">
+                        <div class="flex items-center gap-5 mb-6">
+                            <img src="assets/images/testi-img-1.png" alt="" class="w-full max-w-14">
+                            <div class="flex items-center justify-between w-full">
+                                <div class="block">
+                                    <h5 class="text-base font-semibold leading-[26px] text-[#002225] mb-1">Karla Lynn
+                                    </h5>
+                                    <p class="text-sm leading-[22px] text-[#6B7280]">@karlalynn98</p>
+                                </div>
+                                <button class="text-black transition-all duration-500 hover:text-[#004046]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                        fill="none">
+                                        <rect width="30" height="30" rx="5" fill="currentcolor" />
+                                        <path
+                                            d="M16.3319 13.928L21.5437 8H20.3087L15.7833 13.1472L12.1688 8H8L13.4657 15.7835L8 22H9.2351L14.0141 16.5643L17.8312 22H22L16.3316 13.928H16.3319ZM14.6403 15.8521L14.0865 15.077L9.68013 8.90978H11.5772L15.1331 13.887L15.6869 14.662L20.3093 21.1316H18.4122L14.6403 15.8524V15.8521Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-base leading-[26px] text-[#002225]">
+                            I've been using <a href="components.html" class="text-[#2DC38C]">@mintwint</a> for a year
+                            now and it's made
+                            managing my finances so much easier. 🙌
+                        </p>
+                    </div>
+                    <p class="text-sm leading-[22px] text-[#6B7280]">08:10 PM | 23 Mar 2022</p>
+                </div>
+                <div
+                    class="p-6 rounded-3xl  bg-[#00222505] flex justify-between flex-col transition-all duration-500 hover:bg-[#0022250A]">
+                    <div class="w-full mb-6">
+                        <div class="flex items-center gap-5 mb-6">
+                            <img src="assets/images/testi-img-4.png" alt="" class="w-full max-w-14">
+                            <div class="flex items-center justify-between w-full">
+                                <div class="block">
+                                    <h5 class="text-base font-semibold leading-[26px] text-[#002225] mb-1">Annette Black
+                                    </h5>
+                                    <p class="text-sm leading-[22px] text-[#6B7280]">@annetteblack35</p>
+                                </div>
+                                <button class="text-black transition-all duration-500 hover:text-[#004046]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                        fill="none">
+                                        <rect width="30" height="30" rx="5" fill="currentcolor" />
+                                        <path
+                                            d="M16.3319 13.928L21.5437 8H20.3087L15.7833 13.1472L12.1688 8H8L13.4657 15.7835L8 22H9.2351L14.0141 16.5643L17.8312 22H22L16.3316 13.928H16.3319ZM14.6403 15.8521L14.0865 15.077L9.68013 8.90978H11.5772L15.1331 13.887L15.6869 14.662L20.3093 21.1316H18.4122L14.6403 15.8524V15.8521Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-base leading-[26px] text-[#002225]">
+                            <a href="components.html" class="text-[#2DC38C]">@mintwint</a> has helped me save money,
+                            reduce my debt, and invest in my future - it's the complete financial package.
+                        </p>
+                    </div>
+                    <p class="text-sm leading-[22px] text-[#6B7280]">08:10 PM | 23 Mar 2022</p>
+                </div>
+                <div
+                    class="p-6 rounded-3xl  bg-[#00222505] flex justify-between flex-col transition-all duration-500 hover:bg-[#0022250A]">
+                    <div class="w-full mb-6">
+                        <div class="flex items-center gap-5 mb-6">
+                            <img src="assets/images/testi-img-2.png" alt="" class="w-full max-w-14">
+                            <div class="flex items-center justify-between w-full">
+                                <div class="block">
+                                    <h5 class="text-base font-semibold leading-[26px] text-[#002225] mb-1">Arlene McCoy
+                                    </h5>
+                                    <p class="text-sm leading-[22px] text-[#6B7280]">@arlenemccoy65</p>
+                                </div>
+                                <button class="text-black transition-all duration-500 hover:text-[#004046]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                        fill="none">
+                                        <rect width="30" height="30" rx="5" fill="currentcolor" />
+                                        <path
+                                            d="M16.3319 13.928L21.5437 8H20.3087L15.7833 13.1472L12.1688 8H8L13.4657 15.7835L8 22H9.2351L14.0141 16.5643L17.8312 22H22L16.3316 13.928H16.3319ZM14.6403 15.8521L14.0865 15.077L9.68013 8.90978H11.5772L15.1331 13.887L15.6869 14.662L20.3093 21.1316H18.4122L14.6403 15.8524V15.8521Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-base leading-[26px] text-[#002225]">
+                            <a href="components.html" class="text-[#2DC38C]">@mintwint</a> “I Love this." 😍
+                        </p>
+                    </div>
+                    <p class="text-sm leading-[22px] text-[#6B7280]">08:10 PM | 23 Mar 2022</p>
+                </div>
+                <div
+                    class="p-6 rounded-3xl  bg-[#00222505] flex justify-between flex-col transition-all duration-500 hover:bg-[#0022250A]">
+                    <div class="w-full mb-6">
+                        <div class="flex items-center gap-5 mb-6">
+                            <img src="assets/images/testi-img-5.png" alt="" class="w-full max-w-14">
+                            <div class="flex items-center justify-between w-full">
+                                <div class="block">
+                                    <h5 class="text-base font-semibold leading-[26px] text-[#002225] mb-1">Jane Cooper
+                                    </h5>
+                                    <p class="text-sm leading-[22px] text-[#6B7280]">@janecooper65</p>
+                                </div>
+                                <button class="text-black transition-all duration-500 hover:text-[#004046]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                        fill="none">
+                                        <rect width="30" height="30" rx="5" fill="currentcolor" />
+                                        <path
+                                            d="M16.3319 13.928L21.5437 8H20.3087L15.7833 13.1472L12.1688 8H8L13.4657 15.7835L8 22H9.2351L14.0141 16.5643L17.8312 22H22L16.3316 13.928H16.3319ZM14.6403 15.8521L14.0865 15.077L9.68013 8.90978H11.5772L15.1331 13.887L15.6869 14.662L20.3093 21.1316H18.4122L14.6403 15.8524V15.8521Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-base leading-[26px] text-[#002225]">
+                            <a href="components.html" class="text-[#2DC38C]">@mintwint</a> You guys solved my struggle
+                            insanely quick and loved to recommend pagedone to friends 🙌
+                        </p>
+                    </div>
+                    <p class="text-sm leading-[22px] text-[#6B7280]">08:10 PM | 23 Mar 2022</p>
+                </div>
+                <div
+                    class="p-6 rounded-3xl  bg-[#00222505] flex justify-between flex-col transition-all duration-500 hover:bg-[#0022250A]">
+                    <div class="w-full mb-6">
+                        <div class="flex items-center gap-5 mb-6">
+                            <img src="assets/images/testi-img-3.png" alt="" class="w-full max-w-14">
+                            <div class="flex items-center justify-between w-full">
+                                <div class="block">
+                                    <h5 class="text-base font-semibold leading-[26px] text-[#002225] mb-1">Jenny Wilson
+                                    </h5>
+                                    <p class="text-sm leading-[22px] text-[#6B7280]">@jennywilson968</p>
+                                </div>
+                                <button class="text-black transition-all duration-500 hover:text-[#004046]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                        fill="none">
+                                        <rect width="30" height="30" rx="5" fill="currentcolor" />
+                                        <path
+                                            d="M16.3319 13.928L21.5437 8H20.3087L15.7833 13.1472L12.1688 8H8L13.4657 15.7835L8 22H9.2351L14.0141 16.5643L17.8312 22H22L16.3316 13.928H16.3319ZM14.6403 15.8521L14.0865 15.077L9.68013 8.90978H11.5772L15.1331 13.887L15.6869 14.662L20.3093 21.1316H18.4122L14.6403 15.8524V15.8521Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-base leading-[26px] text-[#002225]">
+                            This <a href="components.html" class="text-[#2DC38C]">@mintwint</a> has transformed the way
+                            I manage my investments, making it easier than ever to keep track of my portfolio and
+                            maximize my returns. 😊
+                        </p>
+                    </div>
+                    <p class="text-sm leading-[22px] text-[#6B7280]">08:10 PM | 23 Mar 2022</p>
+                </div>
+                <div
+                    class="p-6 rounded-3xl  bg-[#00222505] flex justify-between flex-col transition-all duration-500 hover:bg-[#0022250A]">
+                    <div class="w-full mb-6">
+                        <div class="flex items-center gap-5 mb-6">
+                            <img src="assets/images/testi-img-6.png" alt="" class="w-full max-w-14">
+                            <div class="flex items-center justify-between w-full">
+                                <div class="block">
+                                    <h5 class="text-base font-semibold leading-[26px] text-[#002225] mb-1">Marvin
+                                        McKinney
+                                    </h5>
+                                    <p class="text-sm leading-[22px] text-[#6B7280]">@marvinmckinney45</p>
+                                </div>
+                                <button class="text-black transition-all duration-500 hover:text-[#004046]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                        fill="none">
+                                        <rect width="30" height="30" rx="5" fill="currentcolor" />
+                                        <path
+                                            d="M16.3319 13.928L21.5437 8H20.3087L15.7833 13.1472L12.1688 8H8L13.4657 15.7835L8 22H9.2351L14.0141 16.5643L17.8312 22H22L16.3316 13.928H16.3319ZM14.6403 15.8521L14.0865 15.077L9.68013 8.90978H11.5772L15.1331 13.887L15.6869 14.662L20.3093 21.1316H18.4122L14.6403 15.8524V15.8521Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-base leading-[26px] text-[#002225]">
+                            <a href="components.html" class="text-[#2DC38C]">@mintwint</a> it's truly been a
+                            game-changer for me.😊😍
+                        </p>
+                    </div>
+                    <p class="text-sm leading-[22px] text-[#6B7280]">08:10 PM | 23 Mar 2022</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ section  -->
+    <div class="block relative  pb-28 ">
+        <div class="mx-auto max-w-[1204px] px-4 sm:px-6 lg:px-8">
+            <div class=" mb-14 lg:gap-0 gap-8">
+                <div class="flex flex-col items-center  gap-2.5 title">
+                    <h2 class="text-[40px] leading-[56px] font-semibold  text-primary-black">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class=" text-sm text-semi-black font-normal leading-[20px] text-center">
+                        Start Designing Today and Cut Down Hours
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-12">
+
+                <div class="accordion-group w-full flex-col justify-start items-start gap-8 flex"
+                    data-accordion="default-accordion">
+                    <div
+                        class="w-full md:p-6 p-4 rounded-2xl border border-gray-200 justify-start items-start lg:gap-x-8 lg:gap-y-0 gap-y-8 grid lg:grid-cols-12 grid-cols-1">
+                        <div class="lg:col-span-5 col-span-12 flex-col justify-start items-start gap-1.5 inline-flex">
+                            <h3 class="text-primary-black text-2xl font-medium font-inter leading-9">General Report</h3>
+                            <p class="text-semi-black text-sm font-normal leading-5">A general report provides a concise
+                                overview of key findings and conclusions on a specific subject.</p>
+                        </div>
+                        <div class="flex flex-col gap-5 h-full lg:col-span-7 col-span-12">
+                            <div class="accordion rounded-xl border border-theme-border bg-white hover:bg-white accordion-active:bg-indigo-100 p-4 active"
+                                id="basic-heading-one-with-arrow-always-open">
+                                <button
+                                    class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base font-normal leading-[26px] text-primary-black w-full transition duration-500 hover:text-gray-900 accordion-active:text-gray-900 accordion-active:font-medium always-open"
+                                    aria-controls="basic-collapse-one-with-arrow-always-open">
+                                    <h5 class="text-start">Where can I find my order history? </h5>
+                                    <a href=""
+                                        class="w-6 h-6 accordion-active:bg-black rounded-full flex items-center justify-center pointer-events-none">
+                                        <svg class="accordion-active:block hidden" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM13.565 7.56532C13.8774 7.2529 13.8774 6.74637 13.565 6.43395C13.2525 6.12153 12.746 6.12153 12.4336 6.43395L9.99927 8.86826L7.56495 6.43395C7.25253 6.12153 6.746 6.12153 6.43358 6.43395C6.12116 6.74637 6.12116 7.2529 6.43358 7.56532L8.8679 9.99963L6.43358 12.4339C6.12116 12.7464 6.12116 13.2529 6.43358 13.5653C6.746 13.8777 7.25253 13.8777 7.56495 13.5653L9.99927 11.131L12.4336 13.5653C12.746 13.8777 13.2525 13.8777 13.565 13.5653C13.8774 13.2529 13.8774 12.7464 13.565 12.4339L11.1306 9.99963L13.565 7.56532Z"
+                                                fill="#111827" />
+                                        </svg>
+                                        <svg class="accordion-active:hidden block" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM10.7993 5.99963C10.7993 5.55781 10.4411 5.19963 9.99927 5.19963C9.55744 5.19963 9.19927 5.55781 9.19927 5.99963L9.19927 9.19963H5.99927C5.55744 9.19963 5.19927 9.55781 5.19927 9.99963C5.19927 10.4415 5.55744 10.7996 5.99927 10.7996H9.19927V13.9996C9.19927 14.4415 9.55744 14.7996 9.99927 14.7996C10.4411 14.7996 10.7993 14.4415 10.7993 13.9996V10.7996H13.9993C14.4411 10.7996 14.7993 10.4415 14.7993 9.99963C14.7993 9.55781 14.4411 9.19963 13.9993 9.19963H10.7993V5.99963Z"
+                                                fill="#BCBCBC" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_4019_50" x1="0.199219" y1="19.7998"
+                                                    x2="23.6855" y2="7.81701" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#4F46E5" />
+                                                    <stop offset="1" stop-color="#818CF8" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <div id="basic-collapse-one-with-arrow-always-open"
+                                    class="accordion-content w-full px-0 overflow-hidden active"
+                                    style="max-height: 100px;"
+                                    aria-labelledby="basic-heading-one-with-arrow-always-open">
+                                    <p class="text-sm font-normal leading-5 text-semi-black pt-4">
+                                        You can view your order history by logging into your account and navigating to
+                                        the "Order
+                                        History"
+                                        section.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion rounded-xl border border-theme-border bg-white hover:bg-white accordion-active:bg-indigo-100 p-4"
+                                id="basic-heading-two-with-arrow-always-open">
+                                <button
+                                    class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base font-normal leading-[26px] text-primary-black w-full transition duration-500 hover:text-gray-900 accordion-active:text-gray-900 accordion-active:font-medium"
+                                    aria-controls="basic-collapse-two-with-arrow-always-open">
+                                    <h5 class="text-start">Which is better short term or long term?</h5>
+                                    <a href=""
+                                        class="w-6 h-6 accordion-active:bg-black rounded-full flex items-center justify-center pointer-events-none">
+                                        <svg class="accordion-active:block hidden" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM13.565 7.56532C13.8774 7.2529 13.8774 6.74637 13.565 6.43395C13.2525 6.12153 12.746 6.12153 12.4336 6.43395L9.99927 8.86826L7.56495 6.43395C7.25253 6.12153 6.746 6.12153 6.43358 6.43395C6.12116 6.74637 6.12116 7.2529 6.43358 7.56532L8.8679 9.99963L6.43358 12.4339C6.12116 12.7464 6.12116 13.2529 6.43358 13.5653C6.746 13.8777 7.25253 13.8777 7.56495 13.5653L9.99927 11.131L12.4336 13.5653C12.746 13.8777 13.2525 13.8777 13.565 13.5653C13.8774 13.2529 13.8774 12.7464 13.565 12.4339L11.1306 9.99963L13.565 7.56532Z"
+                                                fill="#111827" />
+                                        </svg>
+                                        <svg class="accordion-active:hidden block" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM10.7993 5.99963C10.7993 5.55781 10.4411 5.19963 9.99927 5.19963C9.55744 5.19963 9.19927 5.55781 9.19927 5.99963L9.19927 9.19963H5.99927C5.55744 9.19963 5.19927 9.55781 5.19927 9.99963C5.19927 10.4415 5.55744 10.7996 5.99927 10.7996H9.19927V13.9996C9.19927 14.4415 9.55744 14.7996 9.99927 14.7996C10.4411 14.7996 10.7993 14.4415 10.7993 13.9996V10.7996H13.9993C14.4411 10.7996 14.7993 10.4415 14.7993 9.99963C14.7993 9.55781 14.4411 9.19963 13.9993 9.19963H10.7993V5.99963Z"
+                                                fill="#BCBCBC" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_4019_50_1" x1="0.199219" y1="19.7998"
+                                                    x2="23.6855" y2="7.81701" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#4F46E5" />
+                                                    <stop offset="1" stop-color="#818CF8" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <div id="basic-collapse-two-with-arrow-always-open"
+                                    class="accordion-content w-full px-0 overflow-hidden "
+                                    aria-labelledby="basic-heading-two-with-arrow-always-open" style="">
+                                    <p class="text-sm font-normal leading-5 text-semi-black pt-4">
+                                        You can view your order history by logging into your account and navigating to
+                                        the "Order
+                                        History"
+                                        section.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion rounded-xl border border-theme-border bg-white hover:bg-white accordion-active:bg-indigo-100 p-4"
+                                id="basic-heading-three-with-arrow-always-open">
+                                <button
+                                    class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base font-normal leading-[26px] text-primary-black w-full transition duration-500 hover:text-gray-900 accordion-active:text-gray-900 accordion-active:font-medium"
+                                    aria-controls="basic-collapse-three-with-arrow-always-open">
+                                    <h5 class="text-start">How do I delete my account?</h5>
+                                    <a href=""
+                                        class="w-6 h-6 accordion-active:bg-black rounded-full flex items-center justify-center pointer-events-none">
+                                        <svg class="accordion-active:block hidden" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM13.565 7.56532C13.8774 7.2529 13.8774 6.74637 13.565 6.43395C13.2525 6.12153 12.746 6.12153 12.4336 6.43395L9.99927 8.86826L7.56495 6.43395C7.25253 6.12153 6.746 6.12153 6.43358 6.43395C6.12116 6.74637 6.12116 7.2529 6.43358 7.56532L8.8679 9.99963L6.43358 12.4339C6.12116 12.7464 6.12116 13.2529 6.43358 13.5653C6.746 13.8777 7.25253 13.8777 7.56495 13.5653L9.99927 11.131L12.4336 13.5653C12.746 13.8777 13.2525 13.8777 13.565 13.5653C13.8774 13.2529 13.8774 12.7464 13.565 12.4339L11.1306 9.99963L13.565 7.56532Z"
+                                                fill="#111827" />
+                                        </svg>
+                                        <svg class="accordion-active:hidden block" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM10.7993 5.99963C10.7993 5.55781 10.4411 5.19963 9.99927 5.19963C9.55744 5.19963 9.19927 5.55781 9.19927 5.99963L9.19927 9.19963H5.99927C5.55744 9.19963 5.19927 9.55781 5.19927 9.99963C5.19927 10.4415 5.55744 10.7996 5.99927 10.7996H9.19927V13.9996C9.19927 14.4415 9.55744 14.7996 9.99927 14.7996C10.4411 14.7996 10.7993 14.4415 10.7993 13.9996V10.7996H13.9993C14.4411 10.7996 14.7993 10.4415 14.7993 9.99963C14.7993 9.55781 14.4411 9.19963 13.9993 9.19963H10.7993V5.99963Z"
+                                                fill="#BCBCBC"" />
+                      <defs>
+                        <linearGradient id=" paint0_linear_4019_50_2" x1="0.199219" y1="19.7998" x2="23.6855"
+                                                y2="7.81701" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#4F46E5" />
+                                                <stop offset="1" stop-color="#818CF8" />
+                                                </linearGradient>
+                                                </defs>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <div id="basic-collapse-three-with-arrow-always-open"
+                                    class="accordion-content w-full px-0 overflow-hidden"
+                                    aria-labelledby="basic-heading-three-with-arrow-always-open">
+                                    <p class="text-sm font-normal leading-5 text-semi-black pt-4">
+                                        You can view your order history by logging into your account and navigating to
+                                        the "Order
+                                        History"
+                                        section.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion rounded-xl border border-theme-border bg-white hover:bg-white accordion-active:bg-indigo-100 p-4"
+                                id="basic-heading-four-with-arrow-always-open">
+                                <button
+                                    class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base font-normal leading-[26px] text-primary-black w-full transition duration-500 hover:text-gray-900 accordion-active:text-gray-900 accordion-active:font-medium"
+                                    aria-controls="basic-collapse-four-with-arrow-always-open">
+                                    <h5 class="text-start">Which is safe investment?</h5>
+                                    <a href=""
+                                        class="w-6 h-6 accordion-active:bg-black rounded-full flex items-center justify-center pointer-events-none">
+                                        <svg class="accordion-active:block hidden" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM13.565 7.56532C13.8774 7.2529 13.8774 6.74637 13.565 6.43395C13.2525 6.12153 12.746 6.12153 12.4336 6.43395L9.99927 8.86826L7.56495 6.43395C7.25253 6.12153 6.746 6.12153 6.43358 6.43395C6.12116 6.74637 6.12116 7.2529 6.43358 7.56532L8.8679 9.99963L6.43358 12.4339C6.12116 12.7464 6.12116 13.2529 6.43358 13.5653C6.746 13.8777 7.25253 13.8777 7.56495 13.5653L9.99927 11.131L12.4336 13.5653C12.746 13.8777 13.2525 13.8777 13.565 13.5653C13.8774 13.2529 13.8774 12.7464 13.565 12.4339L11.1306 9.99963L13.565 7.56532Z"
+                                                fill="#111827" />
+                                        </svg>
+                                        <svg class="accordion-active:hidden block" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM10.7993 5.99963C10.7993 5.55781 10.4411 5.19963 9.99927 5.19963C9.55744 5.19963 9.19927 5.55781 9.19927 5.99963L9.19927 9.19963H5.99927C5.55744 9.19963 5.19927 9.55781 5.19927 9.99963C5.19927 10.4415 5.55744 10.7996 5.99927 10.7996H9.19927V13.9996C9.19927 14.4415 9.55744 14.7996 9.99927 14.7996C10.4411 14.7996 10.7993 14.4415 10.7993 13.9996V10.7996H13.9993C14.4411 10.7996 14.7993 10.4415 14.7993 9.99963C14.7993 9.55781 14.4411 9.19963 13.9993 9.19963H10.7993V5.99963Z"
+                                                fill="#BCBCBC" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_4019_50_3" x1="0.199219" y1="19.7998"
+                                                    x2="23.6855" y2="7.81701" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#4F46E5" />
+                                                    <stop offset="1" stop-color="#818CF8" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <div id="basic-collapse-four-with-arrow-always-open"
+                                    class="accordion-content w-full px-0 overflow-hidden"
+                                    aria-labelledby="basic-heading-four-with-arrow-always-open">
+                                    <p class="text-sm font-normal leading-5 text-semi-black pt-4">
+                                        You can view your order history by logging into your account and navigating to
+                                        the "Order
+                                        History"
+                                        section.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full md:p-6 p-4 rounded-2xl border border-gray-200 justify-start items-start lg:gap-x-8 lg:gap-y-0 gap-y-8 grid lg:grid-cols-12 grid-cols-1">
+                        <div class="lg:col-span-5 col-span-12 flex-col justify-start items-start gap-1.5 inline-flex">
+                            <h3 class="text-primary-black text-2xl font-medium font-inter leading-9">Our Service</h3>
+                            <p class="text-semi-black text-sm font-normal leading-5">Our service delivers tailored
+                                solutions to
+                                meet your unique needs efficiently and effectively.</p>
+                        </div>
+                        <div class="flex flex-col gap-5 h-full lg:col-span-7 col-span-12">
+                            <div class="accordion rounded-xl border border-theme-border bg-white hover:bg-white accordion-active:bg-indigo-100 p-4"
+                                id="basic-heading-one-with-arrow-always-open">
+                                <button
+                                    class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base font-normal leading-[26px] text-primary-black w-full transition duration-500 hover:text-gray-900 accordion-active:text-gray-900 accordion-active:font-medium"
+                                    aria-controls="basic-collapse-one-with-arrow-always-open">
+                                    <h5 class="text-start">How can I provide feedback on the services I received?</h5>
+                                    <a href=""
+                                        class="w-6 h-6 accordion-active:bg-black rounded-full flex items-center justify-center pointer-events-none">
+                                        <svg class="accordion-active:block hidden" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM13.565 7.56532C13.8774 7.2529 13.8774 6.74637 13.565 6.43395C13.2525 6.12153 12.746 6.12153 12.4336 6.43395L9.99927 8.86826L7.56495 6.43395C7.25253 6.12153 6.746 6.12153 6.43358 6.43395C6.12116 6.74637 6.12116 7.2529 6.43358 7.56532L8.8679 9.99963L6.43358 12.4339C6.12116 12.7464 6.12116 13.2529 6.43358 13.5653C6.746 13.8777 7.25253 13.8777 7.56495 13.5653L9.99927 11.131L12.4336 13.5653C12.746 13.8777 13.2525 13.8777 13.565 13.5653C13.8774 13.2529 13.8774 12.7464 13.565 12.4339L11.1306 9.99963L13.565 7.56532Z"
+                                                fill="#111827" />
+                                        </svg>
+                                        <svg class="accordion-active:hidden block" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM10.7993 5.99963C10.7993 5.55781 10.4411 5.19963 9.99927 5.19963C9.55744 5.19963 9.19927 5.55781 9.19927 5.99963L9.19927 9.19963H5.99927C5.55744 9.19963 5.19927 9.55781 5.19927 9.99963C5.19927 10.4415 5.55744 10.7996 5.99927 10.7996H9.19927V13.9996C9.19927 14.4415 9.55744 14.7996 9.99927 14.7996C10.4411 14.7996 10.7993 14.4415 10.7993 13.9996V10.7996H13.9993C14.4411 10.7996 14.7993 10.4415 14.7993 9.99963C14.7993 9.55781 14.4411 9.19963 13.9993 9.19963H10.7993V5.99963Z"
+                                                fill="#BCBCBC" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_4019_50_4" x1="0.199219" y1="19.7998"
+                                                    x2="23.6855" y2="7.81701" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#4F46E5" />
+                                                    <stop offset="1" stop-color="#818CF8" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <div id="basic-collapse-one-with-arrow-always-open"
+                                    class="accordion-content w-full px-0 overflow-hidden" style=""
+                                    aria-labelledby="basic-heading-one-with-arrow-always-open">
+                                    <p class="text-sm font-normal leading-5 text-semi-black pt-4">
+                                        You can view your order history by logging into your account and navigating to
+                                        the "Order
+                                        History"
+                                        section.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion rounded-xl border border-theme-border bg-white hover:bg-white accordion-active:bg-indigo-100 p-4"
+                                id="basic-heading-two-with-arrow-always-open">
+                                <button
+                                    class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base font-normal leading-[26px] text-primary-black w-full transition duration-500 hover:text-gray-900 accordion-active:text-gray-900 accordion-active:font-medium"
+                                    aria-controls="basic-collapse-two-with-arrow-always-open">
+                                    <h5 class="text-start">Are there any additional fees for your services?</h5>
+                                    <a href=""
+                                        class="w-6 h-6 accordion-active:bg-black rounded-full flex items-center justify-center pointer-events-none">
+                                        <svg class="accordion-active:block hidden" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM13.565 7.56532C13.8774 7.2529 13.8774 6.74637 13.565 6.43395C13.2525 6.12153 12.746 6.12153 12.4336 6.43395L9.99927 8.86826L7.56495 6.43395C7.25253 6.12153 6.746 6.12153 6.43358 6.43395C6.12116 6.74637 6.12116 7.2529 6.43358 7.56532L8.8679 9.99963L6.43358 12.4339C6.12116 12.7464 6.12116 13.2529 6.43358 13.5653C6.746 13.8777 7.25253 13.8777 7.56495 13.5653L9.99927 11.131L12.4336 13.5653C12.746 13.8777 13.2525 13.8777 13.565 13.5653C13.8774 13.2529 13.8774 12.7464 13.565 12.4339L11.1306 9.99963L13.565 7.56532Z"
+                                                fill="#111827" />
+                                        </svg>
+                                        <svg class="accordion-active:hidden block" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM10.7993 5.99963C10.7993 5.55781 10.4411 5.19963 9.99927 5.19963C9.55744 5.19963 9.19927 5.55781 9.19927 5.99963L9.19927 9.19963H5.99927C5.55744 9.19963 5.19927 9.55781 5.19927 9.99963C5.19927 10.4415 5.55744 10.7996 5.99927 10.7996H9.19927V13.9996C9.19927 14.4415 9.55744 14.7996 9.99927 14.7996C10.4411 14.7996 10.7993 14.4415 10.7993 13.9996V10.7996H13.9993C14.4411 10.7996 14.7993 10.4415 14.7993 9.99963C14.7993 9.55781 14.4411 9.19963 13.9993 9.19963H10.7993V5.99963Z"
+                                                fill="#BCBCBC" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_4019_50_5" x1="0.199219" y1="19.7998"
+                                                    x2="23.6855" y2="7.81701" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#4F46E5" />
+                                                    <stop offset="1" stop-color="#818CF8" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <div id="basic-collapse-two-with-arrow-always-open"
+                                    class="accordion-content w-full px-0 overflow-hidden"
+                                    aria-labelledby="basic-heading-two-with-arrow-always-open" style="">
+                                    <p class="text-sm font-normal leading-5 text-semi-black pt-4">
+                                        You can view your order history by logging into your account and navigating to
+                                        the "Order
+                                        History"
+                                        section.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion rounded-xl border border-theme-border bg-white hover:bg-white accordion-active:bg-indigo-100 p-4"
+                                id="basic-heading-three-with-arrow-always-open">
+                                <button
+                                    class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base font-normal leading-[26px] text-primary-black w-full transition duration-500 hover:text-gray-900 accordion-active:text-gray-900 accordion-active:font-medium"
+                                    aria-controls="basic-collapse-three-with-arrow-always-open">
+                                    <h5 class="text-start">How can I request a service appointment?</h5>
+                                    <a href=""
+                                        class="w-6 h-6 accordion-active:bg-black rounded-full flex items-center justify-center pointer-events-none">
+                                        <svg class="accordion-active:block hidden" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM13.565 7.56532C13.8774 7.2529 13.8774 6.74637 13.565 6.43395C13.2525 6.12153 12.746 6.12153 12.4336 6.43395L9.99927 8.86826L7.56495 6.43395C7.25253 6.12153 6.746 6.12153 6.43358 6.43395C6.12116 6.74637 6.12116 7.2529 6.43358 7.56532L8.8679 9.99963L6.43358 12.4339C6.12116 12.7464 6.12116 13.2529 6.43358 13.5653C6.746 13.8777 7.25253 13.8777 7.56495 13.5653L9.99927 11.131L12.4336 13.5653C12.746 13.8777 13.2525 13.8777 13.565 13.5653C13.8774 13.2529 13.8774 12.7464 13.565 12.4339L11.1306 9.99963L13.565 7.56532Z"
+                                                fill="#111827" />
+                                        </svg>
+                                        <svg class="accordion-active:hidden block" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM10.7993 5.99963C10.7993 5.55781 10.4411 5.19963 9.99927 5.19963C9.55744 5.19963 9.19927 5.55781 9.19927 5.99963L9.19927 9.19963H5.99927C5.55744 9.19963 5.19927 9.55781 5.19927 9.99963C5.19927 10.4415 5.55744 10.7996 5.99927 10.7996H9.19927V13.9996C9.19927 14.4415 9.55744 14.7996 9.99927 14.7996C10.4411 14.7996 10.7993 14.4415 10.7993 13.9996V10.7996H13.9993C14.4411 10.7996 14.7993 10.4415 14.7993 9.99963C14.7993 9.55781 14.4411 9.19963 13.9993 9.19963H10.7993V5.99963Z"
+                                                fill="#BCBCBC" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_4019_50_6" x1="0.199219" y1="19.7998"
+                                                    x2="23.6855" y2="7.81701" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#4F46E5" />
+                                                    <stop offset="1" stop-color="#818CF8" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <div id="basic-collapse-three-with-arrow-always-open"
+                                    class="accordion-content w-full px-0 overflow-hidden"
+                                    aria-labelledby="basic-heading-three-with-arrow-always-open">
+                                    <p class="text-sm font-normal leading-5 text-semi-black pt-4">
+                                        You can view your order history by logging into your account and navigating to
+                                        the "Order
+                                        History"
+                                        section.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full md:p-6 p-4 rounded-2xl border border-gray-200 justify-start items-start lg:gap-x-8 lg:gap-y-0 gap-y-8 grid lg:grid-cols-12 grid-cols-1">
+                        <div class="lg:col-span-5 col-span-12 flex-col justify-start items-start gap-1.5 inline-flex">
+                            <h3 class="text-primary-black text-2xl font-medium font-inter leading-9">Support</h3>
+                            <p class="text-semi-black text-sm font-normal leading-5">Our support team is here to assist
+                                you with
+                                any questions or issues you may have.</p>
+                        </div>
+                        <div class="flex flex-col gap-5 h-full lg:col-span-7 col-span-12">
+                            <div class="accordion rounded-xl border border-theme-border bg-white hover:bg-white accordion-active:bg-indigo-100 p-4"
+                                id="basic-heading-one-with-arrow-always-open">
+                                <button
+                                    class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base font-normal leading-[26px] text-primary-black w-full transition duration-500 hover:text-gray-900 accordion-active:text-gray-900 accordion-active:font-medium"
+                                    aria-controls="basic-collapse-one-with-arrow-always-open">
+                                    <h5 class="text-start">How can I contact customer support?</h5>
+                                    <a href=""
+                                        class="w-6 h-6 accordion-active:bg-black rounded-full flex items-center justify-center pointer-events-none">
+                                        <svg class="accordion-active:block hidden" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM13.565 7.56532C13.8774 7.2529 13.8774 6.74637 13.565 6.43395C13.2525 6.12153 12.746 6.12153 12.4336 6.43395L9.99927 8.86826L7.56495 6.43395C7.25253 6.12153 6.746 6.12153 6.43358 6.43395C6.12116 6.74637 6.12116 7.2529 6.43358 7.56532L8.8679 9.99963L6.43358 12.4339C6.12116 12.7464 6.12116 13.2529 6.43358 13.5653C6.746 13.8777 7.25253 13.8777 7.56495 13.5653L9.99927 11.131L12.4336 13.5653C12.746 13.8777 13.2525 13.8777 13.565 13.5653C13.8774 13.2529 13.8774 12.7464 13.565 12.4339L11.1306 9.99963L13.565 7.56532Z"
+                                                fill="#111827" />
+                                        </svg>
+                                        <svg class="accordion-active:hidden block" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM10.7993 5.99963C10.7993 5.55781 10.4411 5.19963 9.99927 5.19963C9.55744 5.19963 9.19927 5.55781 9.19927 5.99963L9.19927 9.19963H5.99927C5.55744 9.19963 5.19927 9.55781 5.19927 9.99963C5.19927 10.4415 5.55744 10.7996 5.99927 10.7996H9.19927V13.9996C9.19927 14.4415 9.55744 14.7996 9.99927 14.7996C10.4411 14.7996 10.7993 14.4415 10.7993 13.9996V10.7996H13.9993C14.4411 10.7996 14.7993 10.4415 14.7993 9.99963C14.7993 9.55781 14.4411 9.19963 13.9993 9.19963H10.7993V5.99963Z"
+                                                fill="#BCBCBC" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_4019_50_7" x1="0.199219" y1="19.7998"
+                                                    x2="23.6855" y2="7.81701" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#4F46E5" />
+                                                    <stop offset="1" stop-color="#818CF8" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <div id="basic-collapse-one-with-arrow-always-open"
+                                    class="accordion-content w-full px-0 overflow-hidden" style=""
+                                    aria-labelledby="basic-heading-one-with-arrow-always-open">
+                                    <p class="text-sm font-normal leading-5 text-semi-black pt-4">
+                                        You can view your order history by logging into your account and navigating to
+                                        the "Order
+                                        History"
+                                        section.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion rounded-xl border border-theme-border bg-white hover:bg-white accordion-active:bg-indigo-100 p-4"
+                                id="basic-heading-two-with-arrow-always-open">
+                                <button
+                                    class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base font-normal leading-[26px] text-primary-black w-full transition duration-500 hover:text-gray-900 accordion-active:text-gray-900 accordion-active:font-medium"
+                                    aria-controls="basic-collapse-two-with-arrow-always-open">
+                                    <h5 class="text-start">What are your support hours?</h5>
+                                    <a href=""
+                                        class="w-6 h-6 accordion-active:bg-black rounded-full flex items-center justify-center pointer-events-none">
+                                        <svg class="accordion-active:block hidden" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM13.565 7.56532C13.8774 7.2529 13.8774 6.74637 13.565 6.43395C13.2525 6.12153 12.746 6.12153 12.4336 6.43395L9.99927 8.86826L7.56495 6.43395C7.25253 6.12153 6.746 6.12153 6.43358 6.43395C6.12116 6.74637 6.12116 7.2529 6.43358 7.56532L8.8679 9.99963L6.43358 12.4339C6.12116 12.7464 6.12116 13.2529 6.43358 13.5653C6.746 13.8777 7.25253 13.8777 7.56495 13.5653L9.99927 11.131L12.4336 13.5653C12.746 13.8777 13.2525 13.8777 13.565 13.5653C13.8774 13.2529 13.8774 12.7464 13.565 12.4339L11.1306 9.99963L13.565 7.56532Z"
+                                                fill="#111827" />
+                                        </svg>
+                                        <svg class="accordion-active:hidden block" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM10.7993 5.99963C10.7993 5.55781 10.4411 5.19963 9.99927 5.19963C9.55744 5.19963 9.19927 5.55781 9.19927 5.99963L9.19927 9.19963H5.99927C5.55744 9.19963 5.19927 9.55781 5.19927 9.99963C5.19927 10.4415 5.55744 10.7996 5.99927 10.7996H9.19927V13.9996C9.19927 14.4415 9.55744 14.7996 9.99927 14.7996C10.4411 14.7996 10.7993 14.4415 10.7993 13.9996V10.7996H13.9993C14.4411 10.7996 14.7993 10.4415 14.7993 9.99963C14.7993 9.55781 14.4411 9.19963 13.9993 9.19963H10.7993V5.99963Z"
+                                                fill="#BCBCBC" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_4019_50_8" x1="0.199219" y1="19.7998"
+                                                    x2="23.6855" y2="7.81701" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#4F46E5" />
+                                                    <stop offset="1" stop-color="#818CF8" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <div id="basic-collapse-two-with-arrow-always-open"
+                                    class="accordion-content w-full px-0 overflow-hidden"
+                                    aria-labelledby="basic-heading-two-with-arrow-always-open" style="">
+                                    <p class="text-sm font-normal leading-5 text-semi-black pt-4">
+                                        You can view your order history by logging into your account and navigating to
+                                        the "Order
+                                        History"
+                                        section.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion rounded-xl border border-theme-border bg-white hover:bg-white accordion-active:bg-indigo-100 p-4"
+                                id="basic-heading-three-with-arrow-always-open">
+                                <button
+                                    class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base font-normal leading-[26px] text-primary-black w-full transition duration-500 hover:text-gray-900 accordion-active:text-gray-900 accordion-active:font-medium"
+                                    aria-controls="basic-collapse-three-with-arrow-always-open">
+                                    <h5 class="text-start">How can I track the progress of my support request?</h5>
+                                    <a href=""
+                                        class="w-6 h-6 accordion-active:bg-black rounded-full flex items-center justify-center pointer-events-none">
+                                        <svg class="accordion-active:block hidden" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM13.565 7.56532C13.8774 7.2529 13.8774 6.74637 13.565 6.43395C13.2525 6.12153 12.746 6.12153 12.4336 6.43395L9.99927 8.86826L7.56495 6.43395C7.25253 6.12153 6.746 6.12153 6.43358 6.43395C6.12116 6.74637 6.12116 7.2529 6.43358 7.56532L8.8679 9.99963L6.43358 12.4339C6.12116 12.7464 6.12116 13.2529 6.43358 13.5653C6.746 13.8777 7.25253 13.8777 7.56495 13.5653L9.99927 11.131L12.4336 13.5653C12.746 13.8777 13.2525 13.8777 13.565 13.5653C13.8774 13.2529 13.8774 12.7464 13.565 12.4339L11.1306 9.99963L13.565 7.56532Z"
+                                                fill="#111827" />
+                                        </svg>
+                                        <svg class="accordion-active:hidden block" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM10.7993 5.99963C10.7993 5.55781 10.4411 5.19963 9.99927 5.19963C9.55744 5.19963 9.19927 5.55781 9.19927 5.99963L9.19927 9.19963H5.99927C5.55744 9.19963 5.19927 9.55781 5.19927 9.99963C5.19927 10.4415 5.55744 10.7996 5.99927 10.7996H9.19927V13.9996C9.19927 14.4415 9.55744 14.7996 9.99927 14.7996C10.4411 14.7996 10.7993 14.4415 10.7993 13.9996V10.7996H13.9993C14.4411 10.7996 14.7993 10.4415 14.7993 9.99963C14.7993 9.55781 14.4411 9.19963 13.9993 9.19963H10.7993V5.99963Z"
+                                                fill="#BCBCBC" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_4019_50_9" x1="0.199219" y1="19.7998"
+                                                    x2="23.6855" y2="7.81701" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#4F46E5" />
+                                                    <stop offset="1" stop-color="#818CF8" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <div id="basic-collapse-three-with-arrow-always-open"
+                                    class="accordion-content w-full px-0 overflow-hidden"
+                                    aria-labelledby="basic-heading-three-with-arrow-always-open">
+                                    <p class="text-sm font-normal leading-5 text-semi-black pt-4">
+                                        You can view your order history by logging into your account and navigating to
+                                        the "Order
+                                        History"
+                                        section.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion rounded-xl border border-theme-border bg-white hover:bg-white accordion-active:bg-indigo-100 p-4"
+                                id="basic-heading-three-with-arrow-always-open">
+                                <button
+                                    class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base font-normal leading-[26px] text-primary-black w-full transition duration-500 hover:text-gray-900 accordion-active:text-gray-900 accordion-active:font-medium"
+                                    aria-controls="basic-collapse-three-with-arrow-always-open">
+                                    <h5 class="text-start">How do I follow up on an existing support case?</h5>
+                                    <a href=""
+                                        class="w-6 h-6 accordion-active:bg-black rounded-full flex items-center justify-center pointer-events-none">
+                                        <svg class="accordion-active:block hidden" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM13.565 7.56532C13.8774 7.2529 13.8774 6.74637 13.565 6.43395C13.2525 6.12153 12.746 6.12153 12.4336 6.43395L9.99927 8.86826L7.56495 6.43395C7.25253 6.12153 6.746 6.12153 6.43358 6.43395C6.12116 6.74637 6.12116 7.2529 6.43358 7.56532L8.8679 9.99963L6.43358 12.4339C6.12116 12.7464 6.12116 13.2529 6.43358 13.5653C6.746 13.8777 7.25253 13.8777 7.56495 13.5653L9.99927 11.131L12.4336 13.5653C12.746 13.8777 13.2525 13.8777 13.565 13.5653C13.8774 13.2529 13.8774 12.7464 13.565 12.4339L11.1306 9.99963L13.565 7.56532Z"
+                                                fill="#111827" />
+                                        </svg>
+                                        <svg class="accordion-active:hidden block" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM10.7993 5.99963C10.7993 5.55781 10.4411 5.19963 9.99927 5.19963C9.55744 5.19963 9.19927 5.55781 9.19927 5.99963L9.19927 9.19963H5.99927C5.55744 9.19963 5.19927 9.55781 5.19927 9.99963C5.19927 10.4415 5.55744 10.7996 5.99927 10.7996H9.19927V13.9996C9.19927 14.4415 9.55744 14.7996 9.99927 14.7996C10.4411 14.7996 10.7993 14.4415 10.7993 13.9996V10.7996H13.9993C14.4411 10.7996 14.7993 10.4415 14.7993 9.99963C14.7993 9.55781 14.4411 9.19963 13.9993 9.19963H10.7993V5.99963Z"
+                                                fill="#BCBCBC" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_4019_50_10" x1="0.199219" y1="19.7998"
+                                                    x2="23.6855" y2="7.81701" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#4F46E5" />
+                                                    <stop offset="1" stop-color="#818CF8" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <div id="basic-collapse-three-with-arrow-always-open"
+                                    class="accordion-content w-full px-0 overflow-hidden"
+                                    aria-labelledby="basic-heading-three-with-arrow-always-open">
+                                    <p class="text-sm font-normal leading-5 text-semi-black pt-4">
+                                        You can view your order history by logging into your account and navigating to
+                                        the "Order
+                                        History"
+                                        section.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion rounded-xl border border-theme-border bg-white hover:bg-white accordion-active:bg-indigo-100 p-4"
+                                id="basic-heading-three-with-arrow-always-open">
+                                <button
+                                    class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base font-normal leading-[26px] text-primary-black w-full transition duration-500 hover:text-gray-900 accordion-active:text-gray-900 accordion-active:font-medium"
+                                    aria-controls="basic-collapse-three-with-arrow-always-open">
+                                    <h5 class="text-start">How do I cancel or modify a support appointment?</h5>
+                                    <a href=""
+                                        class="w-6 h-6 accordion-active:bg-black rounded-full flex items-center justify-center pointer-events-none">
+                                        <svg class="accordion-active:block hidden" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM13.565 7.56532C13.8774 7.2529 13.8774 6.74637 13.565 6.43395C13.2525 6.12153 12.746 6.12153 12.4336 6.43395L9.99927 8.86826L7.56495 6.43395C7.25253 6.12153 6.746 6.12153 6.43358 6.43395C6.12116 6.74637 6.12116 7.2529 6.43358 7.56532L8.8679 9.99963L6.43358 12.4339C6.12116 12.7464 6.12116 13.2529 6.43358 13.5653C6.746 13.8777 7.25253 13.8777 7.56495 13.5653L9.99927 11.131L12.4336 13.5653C12.746 13.8777 13.2525 13.8777 13.565 13.5653C13.8774 13.2529 13.8774 12.7464 13.565 12.4339L11.1306 9.99963L13.565 7.56532Z"
+                                                fill="#111827" />
+                                        </svg>
+                                        <svg class="accordion-active:hidden block" xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.199219 9.99983C0.199219 4.58744 4.58683 0.199829 9.99922 0.199829C15.4116 0.199829 19.7992 4.58744 19.7992 9.99983C19.7992 15.4122 15.4116 19.7998 9.99922 19.7998C4.58683 19.7998 0.199219 15.4122 0.199219 9.99983ZM10.7993 5.99963C10.7993 5.55781 10.4411 5.19963 9.99927 5.19963C9.55744 5.19963 9.19927 5.55781 9.19927 5.99963L9.19927 9.19963H5.99927C5.55744 9.19963 5.19927 9.55781 5.19927 9.99963C5.19927 10.4415 5.55744 10.7996 5.99927 10.7996H9.19927V13.9996C9.19927 14.4415 9.55744 14.7996 9.99927 14.7996C10.4411 14.7996 10.7993 14.4415 10.7993 13.9996V10.7996H13.9993C14.4411 10.7996 14.7993 10.4415 14.7993 9.99963C14.7993 9.55781 14.4411 9.19963 13.9993 9.19963H10.7993V5.99963Z"
+                                                fill="#BCBCBC" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_4019_50_11" x1="0.199219" y1="19.7998"
+                                                    x2="23.6855" y2="7.81701" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#4F46E5" />
+                                                    <stop offset="1" stop-color="#818CF8" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <div id="basic-collapse-three-with-arrow-always-open"
+                                    class="accordion-content w-full px-0 overflow-hidden"
+                                    aria-labelledby="basic-heading-three-with-arrow-always-open">
+                                    <p class="text-sm font-normal leading-5 text-semi-black pt-4">
+                                        You can view your order history by logging into your account and navigating to
+                                        the "Order
+                                        History"
+                                        section.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer
+        class=" relative w-full  after:absolute after:w-full after:h-[118px] after:left-0 after:top-[118px] after:z-0 after:bg-[#F4F7F7] after:rounded-t-3xl">
+        <div class="w-full max-w-7xl mx-auto py-14 relative rounded-[18px] bg-[#002225] overflow-hidden z-10">
+            <div class="absolute -top-1/3 left-[180px] w-28 h-28 bg-[#0CF279] blur-[60px]"></div>
+            <div class="w-full max-w-[1204px] px-4 lg:px-8 mx-auto">
+                <div class="flex items-center flex-col min-[790px]:flex-row max-md:gap-8 md:justify-between">
+                    <div class="max-[790px]:w-full">
+                        <h2
+                            class="text-[44px] leading-[54px] font-medium text-white mb-4 max-w-[540px] max-[790px]:text-center max-[790px]:mx-auto">
+                            Unlock<span class="text-[#0CF279] font-bold "> PRO</span> features today
+                            & speed up your workflow</h2>
+                    </div>
+                    <div class="flex flex-col min-[790px]:items-end">
+                        <button
+                            class="py-3.5 px-6 whitespace-nowrap rounded-lg bg-[#0CF279] text-primary-black text-base font-medium leading-5 transition-all duration-500 hover:bg-[#0adf6d]">Become
+                            a PRO
+                        </button>
+                        <p class="mt-1.5 text-sm leading-[18px] text-white text-right">
+                            Create your website in minutes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#F4F7F7] rounded-b-[24px] flex flex-col items-center pt-14 px-4 pb-0 relative">
+            <div
+                class="flex flex-col lg:flex-row max-lg:gap-8 items-start lg:justify-between w-full max-w-xl lg:max-w-6xl mx-auto">
+                <div class="w-full lg:max-w-[431px]">
+                    <a href="javascript:;" class="!w-max max-sm:mx-auto flex">
+                        <svg width="176" height="46" viewBox="0 0 176 46" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M70.2629 16.2052C73.8259 16.2052 76.2223 18.7056 76.2223 22.7127V32.6502H72.8169V22.9371C72.8169 20.6931 71.6187 19.4429 69.7584 19.4429C67.7404 19.4429 66.3215 20.7572 66.3215 23.6744V32.6502H62.9161V22.9371C62.9161 20.6931 61.8125 19.4429 59.9522 19.4429C58.0288 19.4429 56.4522 20.7572 56.4522 23.6744V32.6502H53.0469V16.622H56.4522V18.5454C57.4612 16.9746 59.0063 16.2052 60.9612 16.2052C63.0107 16.2052 64.5242 17.1349 65.4386 18.7377C66.4792 17.0708 68.1503 16.2052 70.2629 16.2052Z"
+                                fill="#002225" />
+                            <path
+                                d="M81.5695 14.2177C80.3714 14.2177 79.3939 13.1919 79.3939 12.0058C79.3939 10.7877 80.3714 9.79395 81.5695 9.79395C82.7677 9.79395 83.7452 10.7877 83.7452 12.0058C83.7452 13.1919 82.7677 14.2177 81.5695 14.2177ZM79.8669 32.6502V16.622H83.2722V32.6502H79.8669Z"
+                                fill="#002225" />
+                            <path
+                                d="M95.5189 16.2052C99.0504 16.2052 101.573 18.6415 101.573 22.8089V32.6502H98.1675V23.1615C98.1675 20.7252 96.7801 19.4429 94.636 19.4429C92.3973 19.4429 90.6316 20.7893 90.6316 24.0591V32.6502H87.2262V16.622H90.6316V18.6736C91.6721 17.0066 93.3748 16.2052 95.5189 16.2052Z"
+                                fill="#002225" />
+                            <path
+                                d="M114.037 19.9558H110.127V27.6494C110.127 29.701 111.451 29.6689 114.037 29.5407V32.6502C108.803 33.2913 106.722 31.8167 106.722 27.6494V19.9558H103.821V16.622H106.722V13.1599L110.127 12.1341V16.622H114.037V19.9558Z"
+                                fill="#002225" />
+                            <path
+                                d="M135.441 16.622H139.036L134.085 32.6502H130.743L127.464 21.8472L124.153 32.6502H120.811L115.86 16.622H119.455L122.514 27.6814L125.824 16.622H129.072L132.351 27.6814L135.441 16.622Z"
+                                fill="#002225" />
+                            <path
+                                d="M143.246 14.2177C142.048 14.2177 141.071 13.1919 141.071 12.0058C141.071 10.7877 142.048 9.79395 143.246 9.79395C144.444 9.79395 145.422 10.7877 145.422 12.0058C145.422 13.1919 144.444 14.2177 143.246 14.2177ZM141.544 32.6502V16.622H144.949V32.6502H141.544Z"
+                                fill="#002225" />
+                            <path
+                                d="M157.196 16.2052C160.727 16.2052 163.25 18.6415 163.25 22.8089V32.6502H159.844V23.1615C159.844 20.7252 158.457 19.4429 156.313 19.4429C154.074 19.4429 152.308 20.7893 152.308 24.0591V32.6502H148.903V16.622H152.308V18.6736C153.349 17.0066 155.051 16.2052 157.196 16.2052Z"
+                                fill="#002225" />
+                            <path
+                                d="M175.714 19.9558H171.804V27.6494C171.804 29.701 173.128 29.6689 175.714 29.5407V32.6502C170.479 33.2913 168.398 31.8167 168.398 27.6494V19.9558H165.497V16.622H168.398V13.1599L171.804 12.1341V16.622H175.714V19.9558Z"
+                                fill="#002225" />
+                            <path
+                                d="M0 8.1481C0 3.64803 3.64803 0 8.1481 0H37.8519C42.352 0 46 3.64803 46 8.1481V37.8519C46 42.352 42.352 46 37.8519 46H8.1481C3.64803 46 0 42.352 0 37.8519V8.1481Z"
+                                fill="#004046" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M31.1347 12.6842L24.0222 19.7968V9.89746C26.6981 10.1039 29.149 11.1129 31.1347 12.6842ZM21.9754 9.89746V21.8436L12.703 31.1159C10.9334 28.8796 9.87695 26.0532 9.87695 22.98C9.87695 16.0774 15.2067 10.4196 21.9754 9.89746ZM14.0948 32.6187C16.4341 34.7808 19.5622 36.1019 22.9988 36.1019C27.6689 36.1019 31.7693 33.6622 34.0947 29.9877H16.7258L14.0948 32.6187ZM35.1505 27.9409H18.7726L32.6375 14.076C34.7996 16.4153 36.1207 19.5434 36.1207 22.98C36.1207 24.7355 35.7759 26.4105 35.1505 27.9409Z"
+                                fill="#0CF279" />
+                        </svg>
+                    </a>
+                    <p class="mt-5 mb-5 text-base leading-6 text-primary-black max-sm:text-center">
+                        At Mintwint, we specialize in providing high-quality components and blocks for Figma, Framer,
+                        and Webflow.
+                    </p>
+                    <button class="btn-mint py-2.5 px-5 w-max max-sm:mx-auto flex">Try mintwint now</button>
+                </div>
+                <div
+                    class="w-full lg:max-w-[646px] lg:pl-[30px] flex flex-col sm:flex-row items-center sm:items-start max-sm:gap-6 sm:justify-between">
+                    <ul class="flex max-sm:justify-center max-sm:items-center flex-col gap-[18px]">
+                        <li class="text-base leading-5 font-medium text-[#333333]">Product</li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Changelog</a>
+                        </li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Templates</a>
+                        </li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Figma
+                                Components</a></li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Webflow
+                                Components</a></li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Framer
+                                Components</a></li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">How
+                                to use</a></li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Pricing
+                                & FAQ</a></li>
+                    </ul>
+                    <ul class="flex max-sm:justify-center max-sm:items-center flex-col gap-[18px]">
+                        <li class="text-base leading-5 font-medium text-[#333333]">Company</li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">About</a>
+                        </li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Contact
+                                & Support</a></li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">License</a>
+                        </li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Terms
+                                of Service</a></li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Privacy
+                                Policy</a></li>
+
+                    </ul>
+                    <ul class="flex max-sm:justify-center max-sm:items-center flex-col gap-[18px]">
+                        <li class="text-base leading-5 font-medium text-[#333333]">Community</li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Voting
+                                Board</a></li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Request
+                                Components</a></li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Become
+                                an Affiliate</a></li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Discord</a>
+                        </li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Dribbble</a>
+                        </li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Twitter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full  relative pt-[50px]">
+                <img src="assets/images/mintwint-text.png" alt="" class="max-w-7xl mx-auto">
+                <p
+                    class="w-full text-center py-[5px] text-xs leading-5 text-primary-black bg-white absolute bottom-0 left-0 z-10">
+                    © 2024 mintwint. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- <script src="assets/js/jquery-min.js"></script> -->
+    <!-- <script src="assets/js/main.js"></script> -->
+    <script src="assets/js/accordion.js"></script>
+    <!-- navbar  -->
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            mobileMenu.classList.toggle("flex");
+        });
+    </script>
+    <!-- h1 animations  -->
+    <script>
+        $(function () {
+            $("#text").typed({
+                strings: ["Webflow", "Framer", "Figma"],
+                typeSpeed: 50,
+                backSpeed: 20,
+                backDelay: 2000,
+                showCursor: true,
+                loop: true
+            });
+        });
+    </script>
+    <!-- hero slider  -->
+    <script>
+        var swiper = new Swiper(".hero-slider", {
+            spaceBetween: 30,
+
+            speed: 1000,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            on: {
+                slideChangeTransitionStart: function () {
+                    // reset all images
+                    document.querySelectorAll(".slide-img").forEach((img) => {
+                        img.style.opacity = "0";
+                        img.style.transform = "translateX(400px)";
+                        img.style.transition = "none"; // reset transition
+                    });
+
+                    // get current active slide
+                    const activeSlide = this.slides[this.activeIndex];
+                    const images = activeSlide.querySelectorAll(".slide-img");
+
+                    // animate in with staggered delay
+                    images.forEach((img, i) => {
+                        img.style.transition = `opacity 600ms ease-in-out ${i * 300}ms, transform 600ms ease-in-out ${i * 300}ms`;
+                        // trigger animation
+                        setTimeout(() => {
+                            img.style.opacity = "1";
+                            img.style.transform = "translateX(0px)";
+                        }, 50);
+                    });
+                },
+            },
+        });
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <!-- tag animations  -->
+    <script>
+        // Position them initially
+        gsap.set("#mark-tag", { x: -80, y: 50, opacity: 0 });
+        gsap.set("#rubi-tag", { x: 40, y: -30, opacity: 0 });
+
+        // Entrance animations
+        gsap.to("#mark-tag", {
+            x: -50,
+            y: 300,
+            opacity: 1,
+            duration: 1,
+            ease: "power3.out"
+        });
+
+        gsap.to("#rubi-tag", {
+            x: 120,
+            y: -150,
+            opacity: 1,
+            duration: 1,
+            ease: "power3.out",
+            delay: 0.5
+        });
+
+        // Floating loop
+        gsap.to("#mark-tag", {
+            y: "-=25",
+            duration: 4,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        gsap.to("#rubi-tag", {
+            y: "+=35",
+            x: "+-80",
+            duration: 4.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+    </script>
+    <!-- tab  -->
+    <script>
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabButtons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                // Reset all buttons
+                tabButtons.forEach((b) => b.classList.remove("active"));
+                // Hide all contents
+                tabContents.forEach((c) => c.classList.add("hidden"));
+
+                // Activate clicked tab
+                btn.classList.add("active");
+                document.getElementById(btn.dataset.tab).classList.remove("hidden");
+            });
+        });
+    </script>
+</body>
+
+</html>

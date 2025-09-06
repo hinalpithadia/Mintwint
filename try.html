@@ -1,0 +1,59 @@
+<nav class="w-full fixed z-50 top-0 left-0 bg-white shadow">
+  <div class="w-full max-w-[1204px] mx-auto flex items-center justify-between px-4 lg:px-8 py-[15px]">
+    <!-- Logo -->
+    <div>
+      <a href="#">
+        <!-- Your SVG Logo -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="142" height="37" viewBox="0 0 142 37" fill="none">
+          <path d="M56.8801 13.1729C59.7201..." fill="#002225" />
+          <!-- (shortened for clarity, keep your full SVG here) -->
+        </svg>
+      </a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="toggle-menu hidden lg:flex items-center gap-10">
+      <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">Discover</a></li>
+      <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">About Us</a></li>
+      <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">Pricing</a></li>
+      <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">Affiliate</a></li>
+    </ul>
+
+    <!-- Desktop Buttons -->
+    <div class="hidden lg:flex items-center gap-4">
+      <button class="btn-outline" data-modal-target="Sign_up">Sign up</button>
+      <button class="btn-mint" data-modal-target="Sign_In">Login</button>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="menu-toggle" class="lg:hidden flex flex-col gap-1">
+      <span class="w-6 h-0.5 bg-black"></span>
+      <span class="w-6 h-0.5 bg-black"></span>
+      <span class="w-6 h-0.5 bg-black"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden flex-col bg-white px-6 py-4 border-t border-gray-200 lg:hidden">
+    <ul class="flex flex-col gap-4">
+      <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">Discover</a></li>
+      <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">About Us</a></li>
+      <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">Pricing</a></li>
+      <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">Affiliate</a></li>
+    </ul>
+    <div class="flex flex-col gap-3 mt-4">
+      <button class="btn-outline" data-modal-target="Sign_up">Sign up</button>
+      <button class="btn-mint" data-modal-target="Sign_In">Login</button>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("flex");
+  });
+</script>

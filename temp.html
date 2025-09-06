@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Toasts with Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+
+    <!-- Buttons -->
+    <div class="space-x-4">
+        <button id="btn-success" class="bg-green-600 text-white px-4 py-2 rounded-md">
+            Show Success Toast
+        </button>
+        <button id="btn-info" class="bg-blue-600 text-white px-4 py-2 rounded-md">
+           Error in Copies
+        </button>
+        <button id="btn-limit" class="bg-blue-600 text-white px-4 py-2 rounded-md">
+            Copies Limit
+        </button>
+    </div>
+
+    <!-- ✅ Success Toast (dark style) -->
+    <div id="toast-success"
+        class="fixed right-6 bottom-0 translate-y-full opacity-0
+              flex items-start gap-2 max-w-sm py-[18px] px-5 rounded-[14px] 
+              bg-[linear-gradient(90deg,#003b41e6,#001416e6)] backdrop-blur-sm border border-[#008b3e] text-white transition-all duration-500 ease-in-out">
+        <div class="flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="9" fill="white" fill-opacity="0.1"></circle>
+                <path
+                    d="M5.66675 9.18467L7.39316 10.9111C7.67094 11.1889 7.80983 11.3278 7.98241 11.3278C8.15501 11.3278 8.29387 11.1889 8.57166 10.9111L12.3338 7.14893"
+                    stroke="#0AF573" stroke-width="1.2" stroke-linecap="round"></path>
+            </svg>
+        </div>
+        <div class="flex-1">
+            <p class="font-medium text-base leading-[22px] mb-1 text-[#0af573]">Component Copied to Clipboard!</p>
+            <p class="text-xs leading-[18px] text-[#b4c2c4]">Component is ready to be pasted (Ctrl+V) into your project.
+            </p>
+        </div>
+    </div>
+
+    <!-- 🎉 Info Toast (green style) -->
+    <div id="toast-info"
+        class="fixed right-6 bottom-0 translate-y-full opacity-0
+              flex items-start gap-2 max-w-max py-[18px] px-5 rounded-[14px]
+              bg-[linear-gradient(90deg,#250000e6,#001416e6)] backdrop-blur-sm border border-[#78000f] text-white transition-all duration-500 ease-in-out">
+        <div class="flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="9" fill="white" fill-opacity="0.16"></circle>
+                <path d="M8.99707 6V9.5" stroke="#FF2944" stroke-width="1.6" stroke-linecap="round"></path>
+                <path d="M8.99941 12.7061H8.96191" stroke="#FF2944" stroke-width="1.6" stroke-linecap="round"></path>
+            </svg>
+        </div>
+        <div class="flex-1">
+            <p class="font-medium text-[#ff2944] text-base leading-[22px] mb-1">Uh-oh, Something’s gone wrong!</p>
+            <p class="text-xs leading-[18px] text-[#b4c2c4]">Don’t let this bug you Contact Us and we’ll squash it together!</p>
+        </div>
+    </div>
+
+     <div id="toast-limit"
+        class="fixed right-6 bottom-0 translate-y-full opacity-0
+              flex items-start gap-2 max-w-max py-[18px] px-5 rounded-[14px]
+              bg-[linear-gradient(90deg,#250000e6,#001416e6)] backdrop-blur-sm border border-[#78000f] text-white transition-all duration-500 ease-in-out">
+        <div class="flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="9" fill="white" fill-opacity="0.16"></circle>
+                <path d="M8.99707 6V9.5" stroke="#FF2944" stroke-width="1.6" stroke-linecap="round"></path>
+                <path d="M8.99941 12.7061H8.96191" stroke="#FF2944" stroke-width="1.6" stroke-linecap="round"></path>
+            </svg>
+        </div>
+        <div class="flex-1">
+            <p class="font-medium text-[#ff2944] text-base leading-[22px] mb-1">Uh-oh, Something’s gone wrong!</p>
+            <p class="text-xs leading-[18px] text-[#b4c2c4]">Don’t let this bug you Contact Us and we’ll squash it together!</p>
+        </div>
+    </div>
+
+    <script>
+        function showToast(toastId) {
+            const toast = document.getElementById(toastId);
+            clearTimeout(toast.hideTimeout);
+
+            // Show animation
+            toast.classList.remove("translate-y-full", "opacity-0");
+            toast.classList.add("bottom-8", "translate-y-0", "opacity-100");
+
+            // Hide after 3s
+            toast.hideTimeout = setTimeout(() => {
+                toast.classList.add("translate-y-full", "opacity-0");
+                toast.classList.remove("bottom-8", "translate-y-0", "opacity-100");
+            }, 5000);
+        }
+
+        document.getElementById("btn-success").addEventListener("click", () => {
+            showToast("toast-success");
+        });
+
+        document.getElementById("btn-info").addEventListener("click", () => {
+            showToast("toast-info");
+        });
+         document.getElementById("btn-limit").addEventListener("click", () => {
+            showToast("toast-limit");
+        });
+    </script>
+
+</body>
+
+</html>

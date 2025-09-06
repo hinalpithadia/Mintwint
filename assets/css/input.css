@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-inter: "Inter", sans-serif;
+    --color-regal-blue: #243c5a;
+    --color-primary-black: #002225;
+    --color-theme-border: #e4e4e4;
+    --color-semi-black: #6b7280;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    button {
+        @apply cursor-pointer
+    }
+
+    body {
+        @apply font-inter text-primary-black bg-white
+    }
+}
+
+@layer components {
+    .btn-outline {
+        @apply border-[1.5px] whitespace-nowrap cursor-pointer border-theme-border rounded-lg py-2 px-3.5 font-medium font-inter text-sm text-primary-black transition-all duration-500 hover:border-[#c9c9c9]
+    }
+
+    .btn-mint {
+        @apply bg-[#004046] whitespace-nowrap cursor-pointer text-[#0af573] rounded-lg py-2 px-3.5 font-medium font-inter text-sm transition-all duration-500 hover:bg-[#05575f]
+    }
+
+    .btn-white {
+        @apply bg-white whitespace-nowrap cursor-pointer text-primary-black rounded-lg py-2 px-3.5 font-medium font-inter text-sm transition-all duration-500 hover:shadow-sm
+    }
+
+    .compo-card-title {
+        @apply font-semibold text-lg leading-5 text-primary-black mb-2
+    }
+
+    .only-icon-btn {
+        @apply bg-white whitespace-nowrap cursor-pointer text-primary-black rounded-lg p-2.5 font-medium font-inter text-sm transition-all duration-500 hover:shadow-sm
+    }
+
+    .copy-component-btn {
+        @apply w-full flex items-center justify-between border border-theme-border bg-white text-primary-black rounded-lg py-3 px-[15px] text-sm leading-5 font-medium shadow-[0_1px_5px_0_rgba(16,24,40,0.05)] transition-all duration-500 hover:border-[#c9c9c9]
+    }
+
+    .compo-card-text {
+        @apply text-sm leading-[17px] text-semi-black truncate
+    }
+
+    .dropdown {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .drop-top {
+        border-radius: 8px;
+        cursor: pointer;
+        padding: 6px 0 6px 6px;
+        @apply text-[#7C8586] transition-all duration-500 hover:text-primary-black
+    }
+
+
+    .drop-top.active {
+        background: #e7fff2 !important;
+        color: #002225 !important;
+    }
+
+    .dropbtn .arrow-svg {
+        transition: all 0.6s ease-out;
+    }
+
+    .dropdown-content-rel {
+        display: none;
+        position: relative;
+        background: transparent;
+
+    }
+
+    .dropdown-content-rel a {
+        padding: 10px 0px 10px 32px;
+    }
+
+    .dropbtn.active .arrow-svg {
+        transform: rotate(90deg);
+    }
+
+    .card .relative img {
+        @apply border-[0.5px] border-theme-border rounded-[14px]
+    }
+
+    .pro-detail-pera {
+        @apply text-sm leading-[20px] text-semi-black
+    }
+
+    .input-field {
+        @apply mt-1.5 w-full py-2.5 text-base leading-[26px] font-normal text-primary-black placeholder:text-semi-black px-4 border border-theme-border rounded-lg focus:outline-none transition-all duration-300 hover:border-[#c9c9c9] focus:border-[#0CF279]
+    }
+
+    .input-lable {
+        @apply text-sm leading-[22px] font-medium text-primary-black pb-1.5
+    }
+
+    .modal-home {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        display: none;
+
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        justify-content: flex-start;
+        align-items: flex-start;
+        z-index: 1000;
+        overflow: auto;
+    }
+
+    .toggle-container input:checked~.toggle-slider {
+        transform: translateX(103%);
+    }
+
+    input:checked~.toggle-labels .monthly {
+        color: white;
+    }
+
+    input:checked~.toggle-labels .yearly {
+        color: #000;
+    }
+
+    input:not(:checked)~.toggle-labels .monthly {
+        color: #000;
+    }
+
+    input:not(:checked)~.toggle-labels .yearly {
+        color: white;
+    }
+
+    .accordion.active>.accordion-toggle.accordion-active\:text-white {
+        color: #fff;
+    }
+
+    .accordion.active>.accordion-toggle .accordion-active\:rotate-45 {
+        transform: rotate(45deg);
+    }
+
+    .accordion.active>.accordion-toggle .accordion-active\:rotate-45 .accordion-icon {
+        opacity: 0.8;
+    }
+
+    .accordion.active.accordion-active\:bg-indigo-100 {
+        background-color: rgb(224 231 255);
+    }
+
+    .accordion.active.accordion-active\:border-gray-900 {
+        border-color: #191919;
+    }
+
+    .accordion.active>.accordion-content {
+        max-height: 175px !important;
+    }
+
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .accordion-icon {
+        opacity: 0.22;
+    }
+
+    .menu-item.active>.drop-top {
+        background: #e7fff2 !important;
+        border-radius: 8px;
+    }
+
+    .menu-item.active>.drop-top .side-link {
+        color: #002225 !important;
+    }
+
+    .bookmark.active {
+        color: #002225 !important;
+    }
+
+    .hero-slider .swiper-button-next {
+        position: absolute !important;
+        top: 100% !important;
+        z-index: 40 !important;
+        right: 50% !important;
+        transform: translateX(50%) !important;
+        border-radius: 100px !important;
+        border: 1px solid #D5E3E3 !important;
+        background: #FFF !important;
+        box-shadow: 0 2px 7px 0 rgba(23, 23, 35, 0.11) !important;
+        padding: 8px 18px !important;
+        display: flex !important;
+        align-items: center !important;
+        color: #002225 !important;
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        line-height: 20px !important;
+        width: max-content !important;
+        transition: all 0.6s ease-in-out !important;
+    }
+
+    .hero-slider .swiper-button-next:hover {
+        box-shadow: 0 2px 7px 0 rgba(23, 23, 35, 0.16) !important;
+        border: 1px solid #c1cfcf !important;
+    }
+
+    .categories_Btn {
+        @apply py-2.5 px-5 rounded-lg border border-[#E4E4E4] bg-white text-base font-medium leading-[22px] text-[#002225] transition-all duration-300 hover:bg-[#E6ECED] hover:border-[#E6ECED]
+    }
+
+    #text {
+        background: linear-gradient(90deg, rgba(12, 242, 121, 0.00) 0%, rgba(12, 242, 121, 0.30) 100%);
+        color: #08BF5F;
+        padding-right: 10px;
+    }
+    .typed-cursor {
+        color : #08BF5F !important;
+        display: inline-flex;
+        width: 10px;
+        margin: 0 0 0 -6px !important;
+    }
+    .tab-btn.active {
+        @apply bg-[#E6ECED] border-[#E6ECED]
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- REQUIRED META TAGS -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>bevelify</title>
+  <!--- MAIN CSS ---->
+  <link rel="stylesheet" href="assets/css/input.css" />
+  <link rel="stylesheet" href="assets/css/output.css" />
+
+</head>
+
+<body class="bg-white font-inter">
+  <!-- ======= Login Section Start ======= -->
+  <div class="bg-[linear-gradient(#eaf1f1,#fff0)] w-full h-screen flex items-center justify-center">
+    <div class="w-full max-w-[440px] flex flex-col items-center">
+      <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M4 16C4 9.37258 9.37258 4 16 4H46C52.6274 4 58 9.37258 58 16V46C58 52.6274 52.6274 58 46 58H16C9.37258 58 4 52.6274 4 46V16Z"
+          fill="#004046" />
+        <path
+          d="M16 2C8.26801 2 2 8.26801 2 16V46C2 53.732 8.26801 60 16 60H46C53.732 60 60 53.732 60 46V16C60 8.26801 53.732 2 46 2H16Z"
+          stroke="#004046" stroke-opacity="0.1" stroke-width="4" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M40.5485 18.8906L32.199 27.2402V15.6192C35.3403 15.8615 38.2175 17.0461 40.5485 18.8906ZM29.7963 15.6192V29.6429L18.9113 40.5278C16.834 37.9026 15.5938 34.5846 15.5938 30.977C15.5938 22.8739 21.8504 16.2322 29.7963 15.6192ZM20.5452 42.292C23.2913 44.83 26.9634 46.3809 30.9977 46.3809C36.48 46.3809 41.2934 43.5169 44.0233 39.2034H23.6337L20.5452 42.292ZM45.2627 36.8007H26.0365L42.3127 20.5245C44.8507 23.2706 46.4016 26.9427 46.4016 30.977C46.4016 33.0378 45.9969 35.004 45.2627 36.8007Z"
+          fill="#0CF279" />
+      </svg>
+      <h1 class="mt-5 mb-2.5 text-2xl font-semibold leading-[30px] text-primary-black text-center">
+        Create your account
+      </h1>
+      <p class="text-sm leading-5 text-[#6b7280] text-center mb-10">
+        Welcome back Create your account now
+      </p>
+      <form action="#" class="bg-white border border-theme-border rounded-3xl p-6 w-full">
+        <div class="relative w-full mb-4">
+          <label for="name" class="input-lable">Full Name <span class="text-[#ef4444]">*</span></label>
+          <input type="text" name="name" id="name" placeholder="Enter your full name" class="input-field"
+            required>
+        </div>
+        <div class="relative w-full mb-4">
+          <label for="email" class="input-lable">Email <span class="text-[#ef4444]">*</span></label>
+          <input type="text" name="email" id="email" placeholder="Enter your Email address" class="input-field"
+            required>
+        </div>
+        <div class="relative w-full mb-[26px]">
+          <div class="flex items-center justify-between">
+          <label for="password" class="input-lable pb-0">Password <span class="text-[#ef4444]">*</span></label>
+            <a href="#"
+              class="text-sm leading-[18px] font-medium text-[#6b7280] transition-all duration-300 hover:text-[#2dc38c] text-right">Forgot
+              password?</a>
+          </div>
+          <input type="password" name="password" id="password" placeholder="Enter your password" class="input-field"
+            required>
+        </div>
+       
+        <button type="submit" class="btn-mint py-3 px-5 mb-4 w-full text-center">Sign
+          In</button>
+        <div class="flex items-center gap-5">
+          <div class="w-full h-px bg-theme-border"></div>
+          <p class="text-xs leading-[18px] text-[#4D4D4D]">OR</p>
+          <div class="w-full h-px bg-theme-border"></div>
+        </div>
+        <button type="button"
+          class="w-full rounded-lg my-4 flex items-center justify-center gap-2.5 py-3 px-5 bg-white border border-theme-border text-primary-black text-base font-medium leading-5 transition-all duration-300 hover:border-[#c9c9c9]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+            <g clip-path="url(#clip0_13119_9200)">
+              <path
+                d="M20.339 8.14769C20.4279 8.14769 20.5 8.21976 20.5 8.30866V9.99878C20.5 10.6314 20.4412 11.2499 20.3285 11.8499C19.4568 16.5104 15.3509 20.0325 10.4295 19.9985C4.90725 19.9605 0.487799 15.4985 0.500025 9.97624C0.512174 4.46386 4.98475 -0.0012207 10.5 -0.0012207C13.2021 -0.0012207 15.6537 1.07073 17.4537 2.81198C17.5187 2.87483 17.5203 2.97843 17.4564 3.04233L15.0653 5.43339C15.0038 5.49495 14.9043 5.49655 14.8412 5.43651C13.7115 4.36116 12.183 3.70097 10.5 3.70097C7.02456 3.70097 4.22592 6.47972 4.20233 9.95507C4.17862 13.4532 7.00737 16.2966 10.5 16.2966C13.3338 16.2966 15.7306 14.4245 16.5209 11.8499H10.661C10.5721 11.8499 10.5 11.7778 10.5 11.6889V8.30862C10.5 8.21972 10.5721 8.14765 10.661 8.14765H20.339V8.14769Z"
+                fill="#2196F3" />
+              <path
+                d="M4.77922 7.36136L1.74219 5.16698C3.44602 2.0853 6.7293 -0.0012207 10.4995 -0.0012207C13.2016 -0.0012207 15.6532 1.07073 17.4532 2.81198C17.5182 2.87483 17.5199 2.97843 17.4559 3.04233L15.0649 5.43339C15.0034 5.49483 14.904 5.49675 14.8411 5.43683C13.7113 4.36128 12.1827 3.70101 10.4995 3.70101C7.96313 3.70101 5.7768 5.20038 4.77922 7.36136Z"
+                fill="#F44336" />
+              <path
+                d="M17.8364 16.7948C16.0102 18.7654 13.3994 19.9988 10.5008 19.9988C6.5857 19.9988 3.19617 17.7489 1.55469 14.4712L4.65527 12.3464C5.5857 14.6616 7.8525 16.2966 10.5008 16.2966C12.1627 16.2966 13.6742 15.6527 14.7994 14.6008L17.8364 16.7948Z"
+                fill="#4CAF50" />
+              <path
+                d="M4.20223 9.99879C4.20223 10.8286 4.36277 11.6209 4.65453 12.3465L1.55391 14.4712C0.879492 13.1255 0.5 11.6064 0.5 9.99879C0.5 8.24629 0.950703 6.59918 1.74266 5.16699L4.77969 7.36137C4.40906 8.16336 4.20223 9.05715 4.20223 9.99879Z"
+                fill="#FFC107" />
+            </g>
+            <defs>
+              <clipPath id="clip0_13119_9200">
+                <rect width="20" height="20" fill="white" transform="translate(0.5 -0.0012207)" />
+              </clipPath>
+            </defs>
+          </svg>
+          Sign In With Google
+        </button>
+        <p class="text-sm font-normal text-semi-black text-center">Don't have an account? <a
+            class="text-primary-black cursor-pointer font-medium transition-all duration-300 hover:text-[#2dc38c] " href="login.html">Login</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="assets/js/jquery-min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/accordion.js"></script>
+</body>
+
+</html>

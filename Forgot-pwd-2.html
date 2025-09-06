@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- REQUIRED META TAGS -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>bevelify</title>
+  <!--- MAIN CSS ---->
+  <link rel="stylesheet" href="assets/css/input.css" />
+  <link rel="stylesheet" href="assets/css/output.css" />
+
+</head>
+
+<body class="bg-white font-inter">
+  <!-- ======= Login Section Start ======= -->
+  <div class="bg-[linear-gradient(#eaf1f1,#fff0)] w-full h-screen flex items-center justify-center">
+    <div class="w-full max-w-[440px] flex flex-col items-center">
+      <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M4 16C4 9.37258 9.37258 4 16 4H46C52.6274 4 58 9.37258 58 16V46C58 52.6274 52.6274 58 46 58H16C9.37258 58 4 52.6274 4 46V16Z"
+          fill="#004046" />
+        <path
+          d="M16 2C8.26801 2 2 8.26801 2 16V46C2 53.732 8.26801 60 16 60H46C53.732 60 60 53.732 60 46V16C60 8.26801 53.732 2 46 2H16Z"
+          stroke="#004046" stroke-opacity="0.1" stroke-width="4" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M40.5485 18.8906L32.199 27.2402V15.6192C35.3403 15.8615 38.2175 17.0461 40.5485 18.8906ZM29.7963 15.6192V29.6429L18.9113 40.5278C16.834 37.9026 15.5938 34.5846 15.5938 30.977C15.5938 22.8739 21.8504 16.2322 29.7963 15.6192ZM20.5452 42.292C23.2913 44.83 26.9634 46.3809 30.9977 46.3809C36.48 46.3809 41.2934 43.5169 44.0233 39.2034H23.6337L20.5452 42.292ZM45.2627 36.8007H26.0365L42.3127 20.5245C44.8507 23.2706 46.4016 26.9427 46.4016 30.977C46.4016 33.0378 45.9969 35.004 45.2627 36.8007Z"
+          fill="#0CF279" />
+      </svg>
+      <h1 class="mt-5 mb-2.5 text-2xl font-semibold leading-[30px] text-primary-black text-center">
+        Reset your password
+      </h1>
+      <p class="text-sm leading-5 text-[#6b7280] text-center mb-10">
+        Please input your 6-digit one-time code, then set and verify your new password.
+      </p>
+      <form action="#" class="bg-white border border-theme-border rounded-3xl p-6 w-full">
+        <div class="relative w-full mb-4">
+          <label for="code" class="input-lable">6-Digit Code <span class="text-[#ef4444]">*</span></label>
+          <input type="text" name="text" id="code" placeholder="Enter your Email address" class="input-field" required>
+        </div>
+        <div class="relative w-full mb-4">
+          <div class="flex items-center justify-between">
+            <label for="newpassword" class="input-lable pb-0">New Password <span class="text-[#ef4444]">*</span></label>
+
+          </div>
+          <input type="password" name="password" id="newpassword" placeholder="New Password" class="input-field" required>
+        </div>
+        <div class="relative w-full mb-[26px]">
+          <div class="flex items-center justify-between">
+            <label for="CONF-password" class="input-lable pb-0">Confirm Password <span class="text-[#ef4444]">*</span></label>
+
+          </div>
+          <input type="password" name="password" id="CONF-password" placeholder="Confirm Password" class="input-field" required>
+        </div>
+        <button type="submit" class="btn-mint py-3 px-5 mb-4 w-full text-center">Sign
+          In</button>
+        <div class="flex items-center gap-5">
+          <div class="w-full h-px bg-theme-border"></div>
+          <p class="text-xs leading-[18px] text-[#4D4D4D]">OR</p>
+          <div class="w-full h-px bg-theme-border"></div>
+        </div>
+       
+        <p class="mt-4 text-sm font-normal text-semi-black text-center">Didn't receive code?<a
+            class="text-primary-black cursor-pointer font-medium  transition-all duration-300 hover:text-[#2dc38c]"
+            href="signup.html"> Try Again</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="assets/js/jquery-min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/accordion.js"></script>
+</body>
+
+</html>
