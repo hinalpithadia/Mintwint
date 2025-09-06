@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- REQUIRED META TAGS -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>bevelify</title>
+  <!--- MAIN CSS ---->
+  <link rel="stylesheet" href="assets/css/input.css" />
+  <link rel="stylesheet" href="assets/css/output.css" />
+
+</head>
+
+<body class="bg-white font-inter">
+
+  <!--navbar-->
+  <nav class="w-full fixed z-[9999] top-0 left-0 bg-white ">
+    <div class="w-full max-w-[1204px] mx-auto flex items-center justify-between px-4 lg:px-8 py-[15px]">
+      <!-- Logo -->
+      <div>
+        <a href="#">
+          <!-- Your SVG Logo -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="146" height="38" viewBox="0 0 146 38" fill="none">
+            <path
+              d="M58.0422 13.39C60.9856 13.39 62.9652 15.4556 62.9652 18.7658V26.975H60.152V18.9511C60.152 17.0974 59.1622 16.0647 57.6254 16.0647C55.9584 16.0647 54.7863 17.1504 54.7863 19.5602V26.975H51.9732V18.9511C51.9732 17.0974 51.0615 16.0647 49.5247 16.0647C47.9358 16.0647 46.6334 17.1504 46.6334 19.5602V26.975H43.8203V13.7343H46.6334V15.3232C47.467 14.0256 48.7433 13.39 50.3582 13.39C52.0513 13.39 53.3016 14.158 54.057 15.4821C54.9165 14.105 56.297 13.39 58.0422 13.39Z"
+              fill="#002225" />
+            <path
+              d="M67.3824 11.7482C66.3926 11.7482 65.5852 10.9008 65.5852 9.92097C65.5852 8.91467 66.3926 8.09375 67.3824 8.09375C68.3722 8.09375 69.1797 8.91467 69.1797 9.92097C69.1797 10.9008 68.3722 11.7482 67.3824 11.7482ZM65.9759 26.975V13.7343H68.789V26.975H65.9759Z"
+              fill="#002225" />
+            <path
+              d="M78.9058 13.39C81.8231 13.39 83.9069 15.4026 83.9069 18.8452V26.975H81.0938V19.1365C81.0938 17.1239 79.9477 16.0647 78.1765 16.0647C76.3271 16.0647 74.8684 17.1769 74.8684 19.878V26.975H72.0553V13.7343H74.8684V15.4291C75.728 14.0521 77.1346 13.39 78.9058 13.39Z"
+              fill="#002225" />
+            <path
+              d="M94.2032 16.4884H90.9733V22.8439C90.9733 24.5387 92.0673 24.5122 94.2032 24.4063V26.975C89.8793 27.5046 88.1601 26.2865 88.1601 22.8439V16.4884H85.7638V13.7343H88.1601V10.8743L90.9733 10.0269V13.7343H94.2032V16.4884Z"
+              fill="#002225" />
+            <path
+              d="M111.885 13.7343H114.854L110.765 26.975H108.004L105.295 18.0508L102.56 26.975H99.7991L95.7096 13.7343H98.679L101.206 22.8704L103.941 13.7343H106.624L109.332 22.8704L111.885 13.7343Z"
+              fill="#002225" />
+            <path
+              d="M118.333 11.7482C117.343 11.7482 116.535 10.9008 116.535 9.92097C116.535 8.91467 117.343 8.09375 118.333 8.09375C119.322 8.09375 120.13 8.91467 120.13 9.92097C120.13 10.9008 119.322 11.7482 118.333 11.7482ZM116.926 26.975V13.7343H119.739V26.975H116.926Z"
+              fill="#002225" />
+            <path
+              d="M129.856 13.39C132.773 13.39 134.857 15.4026 134.857 18.8452V26.975H132.044V19.1365C132.044 17.1239 130.898 16.0647 129.127 16.0647C127.277 16.0647 125.819 17.1769 125.819 19.878V26.975H123.006V13.7343H125.819V15.4291C126.678 14.0521 128.085 13.39 129.856 13.39Z"
+              fill="#002225" />
+            <path
+              d="M145.153 16.4884H141.923V22.8439C141.923 24.5387 143.017 24.5122 145.153 24.4063V26.975C140.829 27.5046 139.11 26.2865 139.11 22.8439V16.4884H136.714V13.7343H139.11V10.8743L141.923 10.0269V13.7343H145.153V16.4884Z"
+              fill="#002225" />
+            <path
+              d="M0 8.1481C0 3.64803 3.64803 0 8.1481 0H29.8518C34.3519 0 37.9999 3.64803 37.9999 8.1481V29.8519C37.9999 34.352 34.3519 38 29.8518 38H8.1481C3.64803 38 0 34.352 0 29.8519V8.1481Z"
+              fill="#004046" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M25.7209 10.4779L19.8453 16.3535V8.17578C22.0558 8.3463 24.0805 9.17987 25.7209 10.4779ZM18.1545 8.17578V18.0443L10.4947 25.7041C9.03291 23.8567 8.16016 21.5218 8.16016 18.9831C8.16016 13.2809 12.563 8.60712 18.1545 8.17578ZM11.6445 26.9455C13.5769 28.7316 16.161 29.8229 18.9999 29.8229C22.8578 29.8229 26.2451 27.8075 28.1661 24.7721H13.8179L11.6445 26.9455ZM29.0382 23.0813H15.5087L26.9623 11.6276C28.7483 13.5601 29.8397 16.1442 29.8397 18.9831C29.8397 20.4333 29.5549 21.817 29.0382 23.0813Z"
+              fill="#0CF279" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul class="toggle-menu hidden lg:flex items-center gap-10">
+        <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">Discover</a>
+        </li>
+        <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">About
+            Us</a></li>
+        <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">Pricing</a>
+        </li>
+        <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">Affiliate</a>
+        </li>
+      </ul>
+
+      <!-- Desktop Buttons -->
+      <div class="hidden lg:flex items-center gap-4">
+        <button class="btn-outline" data-modal-target="Sign_up">Sign up</button>
+        <button class="btn-mint" data-modal-target="Sign_In">Login</button>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-toggle" class="lg:hidden flex flex-col gap-1">
+        <span class="w-6 h-0.5 bg-black"></span>
+        <span class="w-6 h-0.5 bg-black"></span>
+        <span class="w-6 h-0.5 bg-black"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden flex-col bg-white px-6 py-4 lg:hidden">
+      <ul class="flex flex-col items-center gap-4">
+        <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">Discover</a></li>
+        <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">About Us</a></li>
+        <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">Pricing</a></li>
+        <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">Affiliate</a></li>
+      </ul>
+      <div class="flex flex-col gap-3 mt-4">
+        <button class="btn-outline" data-modal-target="Sign_up">Sign up</button>
+        <button class="btn-mint" data-modal-target="Sign_In">Login</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======= Login Section Start ======= -->
+  <div class="bg-[linear-gradient(#eaf1f1,#fff0)] pt-28 w-full h-screen flex items-center justify-center">
+    <div class="w-full max-w-[578px] flex flex-col items-center">
+
+      <h1 class="mt-5 mb-3.5 text-[54px] font-semibold leading-[65px] text-primary-black text-center">
+        Request Component
+      </h1>
+      <p class="text-lg leading-[26px] text-[#6b7280] text-center mb-14">
+        Need Something Specific? Let Us Know What to Build Next.
+      </p>
+      <form action="#" class="bg-white border border-theme-border rounded-3xl p-2 w-full">
+        <div class="w-full h-auto bg-linear-to-b from-[#EAF1F1] to-white rounded-3xl py-14">
+          <div class="w-full max-w-[392px] mx-auto">
+            <p class="text-sm leading-5 text-primary-black text-center">Request Component</p>
+            <h3 class="mt-2.5 mb-5 text-2xl font-semibold leading-[30px] text-primary-black text-center">Write Component
+              Details </h3>
+            <div class="relative w-full mb-4">
+              <label for="email" class="input-lable">Your Email <span class="text-[#ef4444]">*</span></label>
+              <input type="text" name="email" id="email" placeholder="Enter your Email" class="input-field bg-white"
+                required>
+            </div>
+            <div class="relative w-full mb-4">
+              <div class="flex items-center justify-between">
+                <label for="ComponentName" class="input-lable pb-0">Component Name <span
+                    class="text-[#ef4444]">*</span></label>
+
+              </div>
+              <input type="text" name="ComponentName" id="ComponentName" placeholder="Enter your subject"
+                class="input-field bg-white" required>
+            </div>
+            <div class="relative w-full mb-4">
+              <div class="flex items-center justify-between">
+                <label for="Componentdetails" class="input-lable pb-0">Component Details <span
+                    class="text-[#ef4444]">*</span></label>
+
+              </div>
+
+              <textarea name="Componentdetails" id="Componentdetails" class="input-field w-full min-h-[110px] bg-white"
+                placeholder="Write a component details" required></textarea>
+            </div>
+            <button type="submit" class="btn-mint py-3 px-5 mb-4 w-full text-center">Sign
+              In</button>
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="assets/js/jquery-min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/accordion.js"></script>
+</body>
+
+</html>
