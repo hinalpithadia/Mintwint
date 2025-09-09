@@ -58,7 +58,6 @@
     .drop-top {
         border-radius: 8px;
         cursor: pointer;
-        padding: 6px 0 6px 6px;
         @apply text-[#7C8586] transition-all duration-500 hover:text-primary-black
     }
 
@@ -102,7 +101,30 @@
     .input-lable {
         @apply text-sm leading-[22px] font-medium text-primary-black pb-1.5
     }
-
+     /*========modal css======*/
+ .modalTrigger.modal-show {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+    }
+    .modalTrigger.modal-hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .modal {
+      position: fixed;
+      left: 28.5%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto;
+      display: none;
+      justify-content: flex-start;
+      align-items: flex-start;
+      z-index: 1000;
+      overflow: auto;
+      max-width: max-content;
+    }
     .modal-home {
         position: fixed;
         left: 50%;
@@ -119,7 +141,20 @@
         z-index: 1000;
         overflow: auto;
     }
-
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 1001;
+    overflow: auto;
+    max-width: max-content;
+  }
     .toggle-container input:checked~.toggle-slider {
         transform: translateX(103%);
     }

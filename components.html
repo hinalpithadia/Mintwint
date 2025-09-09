@@ -256,9 +256,10 @@
                   <li class=" relative">
                     <div class="relative menu-item">
                       <div class="flex items-center gap-2 drop-top">
+                         <a href="#" class=" side-link w-full text-sm font-medium leading-[22px] side-link w-full text-sm font-medium leading-[22px] py-2.5 pl-10">Marketing</a>
                         <!-- Arrow button (absolute) -->
                         <button id="dropdownToggle"
-                          class="dropbtn cursor-pointer rounded left-0 top-0 transition-all duration-500 p-[3px] hover:bg-[#e7fff2]">
+                          class="dropbtn cursor-pointer rounded left-2 top-2 transition-all duration-500 p-[3px] hover:bg-[#e7fff2] absolute w-[26px] h-[26px]">
 
                           <svg id="arrowIcon"
                             class="arrow-svg -rotate-0 transition-transform duration-300 pointer-events-none" width="20"
@@ -268,7 +269,7 @@
                           </svg>
 
                         </button>
-                        <a href="#" class=" side-link w-full text-sm font-medium leading-[22px]">Marketing</a>
+                       
                       </div>
                       <!-- Dropdown (not absolute) -->
                       <div id="dropdownMenu" class="dropdown-content-rel hidden bg-white w-full z-10">
@@ -294,21 +295,24 @@
                       </div>
                     </div>
                   </li>
+                   
                   <li class=" relative menu-item">
                     <div class="relative  menu-item">
                       <div class="flex items-center gap-2 drop-top">
+                         <a href="https://mintwint.com/components/e-commerce" class=" side-link w-full text-sm font-medium leading-[22px] py-2.5 pl-10">E-Commerce</a>
                         <!-- Arrow button (absolute) -->
                         <button id="dropdownToggle"
-                          class="dropbtn cursor-pointer rounded left-0 top-0 transition-all duration-500 p-[3px] hover:bg-[#e7fff2]">
+                          class="dropbtn cursor-pointer rounded left-2 top-2 transition-all duration-500 p-[3px] hover:bg-[#e7fff2] absolute w-[26px] h-[26px]">
                           <svg id="arrowIcon"
                             class="arrow-svg -rotate-0 transition-transform duration-300 pointer-events-none" width="20"
                             height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.50002 4.99662L12.5002 9.99687L7.49707 15" stroke="currentColor"
-                              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                               stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
                         </button>
-                        <a href="#" class=" side-link w-full text-sm font-medium leading-[22px]">E-Commerce</a>
+                       
                       </div>
+                     
                       <!-- Dropdown (not absolute) -->
                       <div id="dropdownMenu" class="dropdown-content-rel hidden bg-white w-full z-10">
                         <div class="flex flex-col gap-0">
@@ -337,10 +341,11 @@
                   </li>
                   <li class=" relative ">
                     <div class="relative menu-item">
-                      <div class="flex items-center gap-2 drop-top">
+                      <div class="flex items-center gap-2 drop-top relative">
+                        <a href="#" class=" side-link w-full text-sm font-medium leading-[22px] py-2.5 pl-10">Application</a>
                         <!-- Arrow button (absolute) -->
                         <button id="dropdownToggle"
-                          class="dropbtn cursor-pointer rounded left-0 top-0 transition-all duration-500 p-[3px] hover:bg-[#e7fff2]">
+                          class="dropbtn cursor-pointer rounded left-2 top-2 transition-all duration-500 p-[3px] hover:bg-[#e7fff2] absolute w-[26px] h-[26px]">
                           <svg id="arrowIcon"
                             class="arrow-svg -rotate-0 transition-transform duration-300 pointer-events-none" width="20"
                             height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -348,7 +353,7 @@
                               stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
                         </button>
-                        <a href="#" class=" side-link w-full text-sm font-medium leading-[22px]">Application</a>
+                        
                       </div>
                       <!-- Dropdown (not absolute) -->
                       <div id="dropdownMenu" class="dropdown-content-rel hidden bg-white w-full z-10">
@@ -455,7 +460,7 @@
                         <ul class="flex flex-col w-full">
                           <li>
                             <a href="#"
-                              class="flex items-center justify-between py-2 px-2.5 bg-white transition-all duration-500 hover:bg-[#F9F9F9]">
+                              class="flex items-center justify-between py-2 px-2.5 bg-white transition-all duration-500 hover:bg-[#F9F9F9]" data-modal-target="pricing-modal">
                               <div
                                 class="flex items-center gap-1.5 text-sm leading-[18px] font-medium text-primary-black">
                                 <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
@@ -1054,6 +1059,185 @@
           </div>
         </div>
       </div>
+      <!-------------modal--------->
+   <!--pricing modal-->
+      <div class="modal modalTrigger bg-white border border-[#3C3C3C] max-h-max rounded-3xl p-[22px]" id="pricing-modal">
+    <!--pricing hero section-->
+    <div class="block relative ">
+      <button
+        class="close-btn absolute right-0 top-0 w-12 h-12 flex items-center justify-center rounded-[10px] bg-[#EAF1F1] transition-all duration-500 hover:bg-theme-border">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <path
+            d="M7.88281 20.1156L13.9992 13.9992M13.9992 13.9992L20.1156 7.88281M13.9992 13.9992L7.88281 7.88281M13.9992 13.9992L20.1156 20.1156"
+            stroke="#002225" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="mx-auto max-w-7xl ">
+        <div class="mb-6 lg:gap-0 gap-8">
+          <div class="flex flex-col items-center gap-1.5 title">
+            <h1 class="text-[40px] leading-[50px] font-medium text-primary-black">Unlock <span
+                class="text-[#00C65E] font-semibold"> PRO</span></h1>
+            <p class="text-sm leading-[18px] text-semi-black font-normal">
+              Level up your Framer and Webflow creations with our membership
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-12">
+          <!-- Updated 3-way toggle -->
+          <div
+            class=" w-full max-w-[318px] h-[36px] bg-[#004046] relative rounded-lg inline-flex items-center justify-center cursor-pointer overflow-hidden m-auto overflow-visible">
+            <!-- Badges for promotions -->
+            <div
+              class="absolute py-1 px-1.5 text-[10px] text-primary-black bg-[#0af573] -bottom-[23px] rounded-b-lg right-1/2 translate-x-1/2 font-medium yearly-badge opacity-1 transition-opacity duration-300">
+              2 Months Free
+            </div>
+            <div
+              class="absolute py-1 px-1.5 text-[10px] text-primary-black bg-[#0af573] -bottom-[23px] rounded-b-lg right-6 font-medium lifetime-badge opacity-0 transition-opacity duration-300">
+              Best Value
+            </div>
+
+            <!-- Hidden radio inputs -->
+            <input type="radio" name="pricing" id="monthly" value="monthly" class="hidden" checked>
+            <input type="radio" name="pricing" id="yearly" value="yearly" class="hidden">
+            <input type="radio" name="pricing" id="lifetime" value="lifetime" class="hidden">
+
+            <!-- Slider -->
+            <div
+              class="toggle-slider absolute z-0 top-[4px] left-[4px] w-[32%] h-[28px] bg-white rounded-md transition-all duration-500">
+            </div>
+
+            <!-- Labels -->
+            <div
+              class="toggle-labels relative w-full flex justify-between items-center text-sm leading-4 text-white font-medium z-30 pointer-events-none text-center">
+              <label for="monthly"
+                class="monthly w-1/3 h-[38px] flex items-center justify-center cursor-pointer pointer-events-auto transition-colors duration-300">Monthly</label>
+              <label for="yearly"
+                class="yearly w-1/3 h-[38px] flex items-center justify-center cursor-pointer pointer-events-auto transition-colors duration-300">Yearly</label>
+              <label for="lifetime"
+                class="lifetime w-1/3 h-[38px] flex items-center justify-center cursor-pointer pointer-events-auto transition-colors duration-300">Lifetime</label>
+            </div>
+          </div>
+
+          <div
+            class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 w-full max-w-[367px] md:max-w-[764px] mx-auto gap-6">
+            <!-- Free Plan -->
+            <div class="bg-white rounded-3xl min-w-[300px]">
+              <div class="bg-white border border-theme-border rounded-3xl h-full">
+                <div class="p-[26px] bg-gradient-to-b from-white/5 to-white/0 rounded-2xl">
+                  <div class="flex flex-col gap-2.5 mb-3.5">
+                    <div class="flex flex-col">
+                      <h4 class="text-xl font-medium leading-[22px] text-primary-black text-center">
+                        Free</h4>
+                    </div>
+                    <div class="flex items-end justify-center">
+                      <span class="text-base leading-[19px] font-semibold text-[#004046] pb-3">$</span>
+                      <h3 class="font-semibold text-[#004046] text-[72px] leading-[87px]">00</h3>
+                      <span class="text-xs leading-[14px] font-normal text-[#004046] pb-3 postfix">/
+                        Month</span>
+                    </div>
+                  </div>
+                  <button class="btn-outline w-full text-center py-[8px] leading-4 text-xs">Get Started</button>
+                  <ul class="flex flex-col gap-3.5 pt-[16px] w-full">
+                    <li class="text-xs leading-[20px] text-semi-black text-center">20+ Figma component
+                    </li>
+                    <li class="text-xs leading-[20px] text-semi-black text-center">20+ Webflow
+                      component</li>
+                    <li class="text-xs leading-[20px] text-semi-black text-center">20+ Framer
+                      component</li>
+                    <li class="text-xs leading-[20px] text-semi-black text-center">Personal Usage</li>
+                    <li class="text-xs leading-[20px] text-semi-black text-center ">10 Copies / Day
+                    </li>
+                    <li class="text-xs leading-[20px] text-semi-black text-center">Email Support</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="bg-white rounded-2xl min-w-[300px]">
+              <div class="bg-[#004046] border border-[#004046] rounded-3xl">
+                <div
+                  class="p-[26px] bg-[linear-gradient(180deg,rgba(241,159,93,0.08)0%,rgba(0,0,0,0.00)100%)] rounded-2xl">
+                  <div class="flex flex-col gap-2.5 mb-3.5">
+                    <div class="flex flex-col">
+                      <h4 class="text-xl font-medium leading-[22px] text-[#0af573] text-center">Pro
+                      </h4>
+                    </div>
+                    <div class="flex items-end justify-center">
+                      <span class="text-base leading-[19px] font-semibold text-white pb-3">$</span>
+                      <h3 class="font-semibold text-white text-[72px] leading-[87px] price" data-monthly="24"
+                        data-yearly="20" data-lifetime="499">24</h3>
+                      <span class="text-xs leading-[14px] font-normal text-white pb-3 postfix">/
+                        Month</span>
+                    </div>
+                  </div>
+                  <button
+                    class="btn-mint w-full text-center text-xs py-[8px] leading-4 bg-[#0af573] text-primary-black hover:bg-[#39f88e]">
+                    Get Started
+                  </button>
+                  <ul class="flex flex-col gap-3.5 pt-[16px] w-full">
+                    <li class="text-xs leading-[20px] text-white text-center">800+ Figma component
+                    </li>
+                    <li class="text-xs leading-[20px] text-white text-center">800+ Webflow component
+                    </li>
+                    <li class="text-xs leading-[20px] text-white text-center">800+ Framer component
+                    </li>
+                    <li class="text-xs leading-[20px] text-white text-center">Commercial Usage</li>
+                    <li class="text-xs leading-[20px] text-white text-center copies">300 Copies / day
+                    </li>
+                    <li class="text-xs leading-[20px] text-white text-center">Email Support</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Email verification modal-->
+   <div class="modal modalTrigger bg-white max-w-[440px] max-h-max rounded-3xl p-[22px] block" id="verify-email">
+    <div class="relative w-full lg:py-10 py-8 px-6 2xl:px-6 rounded-[24px] bg-black-1B1B1B border-[0.8px] border-white/20  h-auto  overflow-auto" >
+        <div class="flex flex-col w-full">
+
+            <span class="close-btn cursor-pointer p-1.5 rounded-full bg-[#1D1D1D] text-white transition-all duration-300 hover:text-limegreen absolute top-4 right-4 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+
+            </span>
+
+
+            <div class="w-full flex flex-col items-center">
+                <svg width="62" height="63" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="4.72668" width="54" height="54" rx="12" fill="#C6FF00"></rect>
+                    <rect x="2" y="2.72668" width="58" height="58" rx="14" stroke="#C6FF00" stroke-opacity="0.1" stroke-width="4"></rect>
+                    <path d="M23.6467 28.5968L15.6277 28.5921L15.6307 34.6676L23.3746 34.6721C24.2148 34.6718 24.9902 34.2241 25.4077 33.4983L29.7753 25.9311C30.1956 25.2036 30.194 24.3087 29.7725 23.5786L25.8949 16.8625L20.6379 19.8976L24.6532 26.8523C25.1045 27.6272 24.5438 28.5946 23.6467 28.5968Z" fill="black"></path>
+                    <path d="M37.2993 26.8399L41.3129 19.8976L36.0499 16.8624L32.174 23.5666C31.7542 24.2944 31.7542 25.1898 32.174 25.9142L36.5436 33.4803C36.9635 34.2081 37.7393 34.6541 38.5823 34.6541H46.3375V28.5838H38.3069C37.4102 28.5872 36.8526 27.6179 37.2993 26.8399Z" fill="black"></path>
+                    <path d="M31.8179 39.6402L35.8233 46.5872L41.0833 43.5469L37.2152 36.8382C36.7949 36.1107 36.0194 35.663 35.1821 35.6644L26.4449 35.6655C25.6047 35.6652 24.8305 36.1141 24.409 36.8442L20.5315 43.5603L25.7885 46.5954L29.8038 39.6408C30.2492 38.8625 31.3674 38.8643 31.8179 39.6402Z" fill="black"></path>
+                </svg>
+
+                <h2 class="text-2xl leading-6 font-semibold text-white mt-5 mb-3">Verify Your Email</h2>
+                <p class="text-sm leading-[18px] text-white font-normal mb-2">You alomst there! We've sent you an email
+                    to</p>
+                <p class="text-sm leading-[18px] text-limegreen font-normal mb-[34px]" id="verify-email">vadipa2468@cspaus.com</p>
+                <div class="bg-[#0A0A0A] border-[0.8px] border-white/10 rounded-lg p-4">
+                    <p class="text-sm leading-[22px] text-white font-normal mb-2 text-center">Just click on the link in
+                        the email to complete your signup. if you don't see it in your inbox, please check your <br>
+                        <span class="text-limegreen">span or junk</span> folder.
+                    </p>
+                    <button type="submit" class="py-3 px-5 mt-4 rounded-lg bg-limegreen text-black text-sm leading-5 font-medium text-center w-full transition-all duration-500 hover:bg-limegreen">Resend
+                        Verification Email</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+   </div>
+  <div
+    class="overlay-modal w-full h-screen z-[500] bg-[#00191B]/50 backdrop-blur-[2px] fixed top-0 left-0 opacity-0 invisible">
+  </div>
+
       <script src="assets/js/jquery-min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.1/alpine.js"></script>
       <script src="assets/js/main.js"></script>
@@ -1067,6 +1251,7 @@
       </script>
     </div>
   </main>
+   
 </body>
 
 </html>
