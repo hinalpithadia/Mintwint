@@ -209,12 +209,12 @@
         opacity: 0.22;
     }
 
-    .menu-item.active>.drop-top {
+    .menu-item.active>.drop-top, .menu-link.active {
         background: #e7fff2 !important;
         border-radius: 8px;
     }
 
-    .menu-item.active>.drop-top .side-link {
+    .menu-item.active>.drop-top .side-link, .menu-link.active {
         color: #002225 !important;
     }
 
