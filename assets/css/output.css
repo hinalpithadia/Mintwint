@@ -4665,6 +4665,9 @@
     border-color: #E6ECED;
     background-color: #E6ECED;
   }
+  .border-none {
+    border: none !important;
+  }
 }
 @property --tw-translate-x {
   syntax: "*";
