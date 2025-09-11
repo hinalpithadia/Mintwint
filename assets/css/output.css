@@ -313,6 +313,9 @@
   .right-1\/2 {
     right: calc(1/2 * 100%);
   }
+  .right-2\.5 {
+    right: calc(var(--spacing) * 2.5);
+  }
   .right-6 {
     right: calc(var(--spacing) * 6);
   }
@@ -2810,6 +2813,9 @@
   .text-\[\#888888\] {
     color: #888888;
   }
+  .text-\[\#acacac\] {
+    color: #acacac;
+  }
   .text-\[\#b4c2c4\] {
     color: #b4c2c4;
   }
@@ -4667,6 +4673,11 @@
   }
   .border-none {
     border: none !important;
+  }
+  input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
   }
 }
 @property --tw-translate-x {
