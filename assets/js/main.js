@@ -87,9 +87,9 @@ $(document).ready(function () {
     }
   });
 
-  $(window).click(function () {
-    $(".dropdown-menu").slideUp(150).addClass("hidden");
-  });
+  // $(window).click(function () {
+  //   $(".dropdown-menu").slideUp(150).addClass("hidden");
+  // });
 });
 
 // Loop through all .menu-item blocks
@@ -305,3 +305,27 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initialize with monthly selected
   updatePricing('monthly');
 });
+/*==========tabs===============*/
+   document.addEventListener('click', function (event) {
+        // Check if the clicked element has the "tablink" class
+        if (event.target.classList.contains('tablink')) {
+            var tab = event.target.dataset.tab; // Get the data-tab attribute value
+            var tabContainer = event.target.closest('.tabs'); // Find the closest .tabs container
+            // Hide all tab content within the current tab container
+            var tabcontents = tabContainer.querySelectorAll('.tabcontent');
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].style.display = 'none';
+            }
+
+            // Remove "active" class from all tab links within the current tab container
+            var tablinks = tabContainer.querySelectorAll('.tablink');
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove('active');
+            }
+
+            // Show the current tab content and add "active" class to the clicked tab link
+            var tabcontent = tabContainer.querySelector('#' + tab);
+            tabcontent.style.display = 'block';
+            event.target.classList.add('active');
+        }
+    });
