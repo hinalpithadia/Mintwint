@@ -263,9 +263,13 @@
         width: 10px;
         margin: 0 0 0 -6px !important;
     }
-    .tab-btn.active {
-        @apply bg-[#E6ECED] border-[#E6ECED]
-    }
+      .tab-btn.active {
+   border-color: #2DC38C !important;
+   background-color: #fff !important;
+  }
+    /* .tab-btn.active {
+        @apply bg-[#fff] border-[#E6ECED]
+    } */
     .border-none{
         border:none!important;
     }
