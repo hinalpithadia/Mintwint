@@ -32,21 +32,7 @@ $(document).ready(function () {
 });
 
 
-
-// $(document).ready(function () {
-//   $(".nav-toggler").click(function () {
-//     const $toggleData = $(".toggle-data");
-
-//     if ($toggleData.is(":visible")) {
-//       $toggleData.slideUp(200, function () {
-//         $(this).addClass("hidden");
-//       });
-//     } else {
-//       $toggleData.removeClass("hidden").hide().slideDown(200);
-//     }
-//   });
-// });
-
+        /*===js dropdown==*/
 $(document).ready(function () {
   $(".dropdown-toggle").click(function (e) {
     e.stopPropagation();
@@ -329,3 +315,12 @@ document.addEventListener('DOMContentLoaded', function () {
             event.target.classList.add('active');
         }
     });
+
+/*======mobile menu========*/
+     const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("hidden");   // show/hide
+    menu.classList.toggle("flex");     // ensure flex layout when visible
+  });

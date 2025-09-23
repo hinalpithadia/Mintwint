@@ -52,7 +52,7 @@
 
         </a>
       </div>
-      <div class="w-full px-5 py-[12px] flex items-center justify-between">
+      <div class="w-full px-5 py-[12px] flex items-center md:justify-between justify-end">
         <div class="relative w-full max-w-[800px] max-md:hidden">
           <input type="search" name="" id="search" 
             class="w-full max-w-[800px] border border-theme-border rounded-lg p-2 py-[9px] pl-9 text-primary-black text-sm leading-6 transition-all duration-500 hover:border-[#c9c9c9] focus-within:!border-[#0af573] focus-within:outline-0"
@@ -75,22 +75,28 @@
 </svg>
 </button>
         </div>
-        <div class="flex items-center gap-4 max-md:w-full justify-end">
-          <button class="btn-outline max-lg:hidden ml-3">Sign up</button>
-          <button class="btn-mint max-lg:hidden">Login</button>
+        <!-- Nav Toggler (mobile only) -->
+<button
+  id="navToggler"
+  class="nav-toggler lg:hidden cursor-pointer rounded-md w-11 h-11 flex items-center justify-center border ml-2 border-theme-border text-[#888888] transition-all duration-500 hover:border-[#c9c9c9] hover:text-primary-black">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+    <path d="M13 6H21" stroke="currentColor" stroke-linecap="round"></path>
+    <path d="M3 12H21" stroke="currentColor" stroke-linecap="round"></path>
+    <path d="M7 18H21" stroke="currentColor" stroke-linecap="round"></path>
+  </svg>
+</button>
 
-          <button
-            class="nav-toggler lg:hidden cursor-pointer rounded-md w-11 h-11 flex items-center justify-center border ml-2 border-theme-border text-[#888888] transition-all duration-500 hover:border-[#c9c9c9] hover:text-primary-black">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 6H21" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path">
-              </path>
-              <path d="M3 12H21" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path">
-              </path>
-              <path d="M7 18H21" stroke="currentColor" stroke-width="null" stroke-linecap="round" class="my-path">
-              </path>
-            </svg>
-          </button>
-        </div>
+<!-- Toggle Menu -->
+<div
+  id="mobileMenu"
+  class="toggle-menu hidden lg:block  max-md:w-full justify-end lg:relative absolute lg:top-0 top-[70px] lg:bg-transparent bg-white lg:w-auto w-full lg:shadow-none shadow-lg lg:p-0 p-6 left-0">
+  <div class="flex lg:flex-row flex-col items-center  gap-4">
+  <button class="btn-outline">Sign up</button>
+  <button class="btn-mint">Login</button>
+  </div>
+</div>
+
+        
       </div>
     </div>
   </nav>
@@ -1323,6 +1329,14 @@ clearBtn.addEventListener('click', () => {
 // Initialize state
 searchInput.addEventListener('input', toggleClearBtn);
 toggleClearBtn();
+   </script>
+   <script>
+   const toggler = document.getElementById("navToggler");
+  const menumobile = document.getElementById("mobileMenu");
+
+  toggler.addEventListener("click", () => {
+    menumobile.classList.toggle("hidden");
+  });
    </script>
 </body>
 
