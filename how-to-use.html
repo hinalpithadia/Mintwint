@@ -578,7 +578,7 @@ Us</a>
       const target = document.getElementById(tab.dataset.target);
       if (target) {
         target.classList.remove('hidden');
-        target.focus();
+        target.focus({ preventScroll: true });
       }
     }
 
