@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- REQUIRED META TAGS -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>mintwint</title>
+    <!--- MAIN CSS ---->
+    <!-- <link rel="stylesheet" href="assets/css/input.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/output.css" />
+
+</head>
+
+<body class="bg-white font-inter box-border overflow-x-hidden">
+    <!--navbar-->
+    <nav class="w-full fixed z-[9999] top-0 left-0 bg-white ">
+        <div class="w-full max-w-[1204px] mx-auto flex items-center justify-between px-4 lg:px-8 py-[15px]">
+            <!-- Logo -->
+            <div>
+                <a href="#">
+                    <!-- Your SVG Logo -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="146" height="38" viewBox="0 0 146 38" fill="none">
+                        <path
+                            d="M58.0422 13.39C60.9856 13.39 62.9652 15.4556 62.9652 18.7658V26.975H60.152V18.9511C60.152 17.0974 59.1622 16.0647 57.6254 16.0647C55.9584 16.0647 54.7863 17.1504 54.7863 19.5602V26.975H51.9732V18.9511C51.9732 17.0974 51.0615 16.0647 49.5247 16.0647C47.9358 16.0647 46.6334 17.1504 46.6334 19.5602V26.975H43.8203V13.7343H46.6334V15.3232C47.467 14.0256 48.7433 13.39 50.3582 13.39C52.0513 13.39 53.3016 14.158 54.057 15.4821C54.9165 14.105 56.297 13.39 58.0422 13.39Z"
+                            fill="#002225" />
+                        <path
+                            d="M67.3824 11.7482C66.3926 11.7482 65.5852 10.9008 65.5852 9.92097C65.5852 8.91467 66.3926 8.09375 67.3824 8.09375C68.3722 8.09375 69.1797 8.91467 69.1797 9.92097C69.1797 10.9008 68.3722 11.7482 67.3824 11.7482ZM65.9759 26.975V13.7343H68.789V26.975H65.9759Z"
+                            fill="#002225" />
+                        <path
+                            d="M78.9058 13.39C81.8231 13.39 83.9069 15.4026 83.9069 18.8452V26.975H81.0938V19.1365C81.0938 17.1239 79.9477 16.0647 78.1765 16.0647C76.3271 16.0647 74.8684 17.1769 74.8684 19.878V26.975H72.0553V13.7343H74.8684V15.4291C75.728 14.0521 77.1346 13.39 78.9058 13.39Z"
+                            fill="#002225" />
+                        <path
+                            d="M94.2032 16.4884H90.9733V22.8439C90.9733 24.5387 92.0673 24.5122 94.2032 24.4063V26.975C89.8793 27.5046 88.1601 26.2865 88.1601 22.8439V16.4884H85.7638V13.7343H88.1601V10.8743L90.9733 10.0269V13.7343H94.2032V16.4884Z"
+                            fill="#002225" />
+                        <path
+                            d="M111.885 13.7343H114.854L110.765 26.975H108.004L105.295 18.0508L102.56 26.975H99.7991L95.7096 13.7343H98.679L101.206 22.8704L103.941 13.7343H106.624L109.332 22.8704L111.885 13.7343Z"
+                            fill="#002225" />
+                        <path
+                            d="M118.333 11.7482C117.343 11.7482 116.535 10.9008 116.535 9.92097C116.535 8.91467 117.343 8.09375 118.333 8.09375C119.322 8.09375 120.13 8.91467 120.13 9.92097C120.13 10.9008 119.322 11.7482 118.333 11.7482ZM116.926 26.975V13.7343H119.739V26.975H116.926Z"
+                            fill="#002225" />
+                        <path
+                            d="M129.856 13.39C132.773 13.39 134.857 15.4026 134.857 18.8452V26.975H132.044V19.1365C132.044 17.1239 130.898 16.0647 129.127 16.0647C127.277 16.0647 125.819 17.1769 125.819 19.878V26.975H123.006V13.7343H125.819V15.4291C126.678 14.0521 128.085 13.39 129.856 13.39Z"
+                            fill="#002225" />
+                        <path
+                            d="M145.153 16.4884H141.923V22.8439C141.923 24.5387 143.017 24.5122 145.153 24.4063V26.975C140.829 27.5046 139.11 26.2865 139.11 22.8439V16.4884H136.714V13.7343H139.11V10.8743L141.923 10.0269V13.7343H145.153V16.4884Z"
+                            fill="#002225" />
+                        <path
+                            d="M0 8.1481C0 3.64803 3.64803 0 8.1481 0H29.8518C34.3519 0 37.9999 3.64803 37.9999 8.1481V29.8519C37.9999 34.352 34.3519 38 29.8518 38H8.1481C3.64803 38 0 34.352 0 29.8519V8.1481Z"
+                            fill="#004046" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M25.7209 10.4779L19.8453 16.3535V8.17578C22.0558 8.3463 24.0805 9.17987 25.7209 10.4779ZM18.1545 8.17578V18.0443L10.4947 25.7041C9.03291 23.8567 8.16016 21.5218 8.16016 18.9831C8.16016 13.2809 12.563 8.60712 18.1545 8.17578ZM11.6445 26.9455C13.5769 28.7316 16.161 29.8229 18.9999 29.8229C22.8578 29.8229 26.2451 27.8075 28.1661 24.7721H13.8179L11.6445 26.9455ZM29.0382 23.0813H15.5087L26.9623 11.6276C28.7483 13.5601 29.8397 16.1442 29.8397 18.9831C29.8397 20.4333 29.5549 21.817 29.0382 23.0813Z"
+                            fill="#0CF279" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="toggle-menu hidden lg:flex items-center gap-10">
+                <li><a href="#"
+                        class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">Discover</a>
+                </li>
+                <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">About
+                        Us</a></li>
+                <li><a href="#"
+                        class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">Pricing</a>
+                </li>
+                <li><a href="#"
+                        class="text-sm font-medium text-primary-black hover:text-[#485455] transition-all">Affiliate</a>
+                </li>
+            </ul>
+
+            <!-- Desktop Buttons -->
+            <div class="hidden lg:flex items-center gap-4">
+                <button class="btn-outline" data-modal-target="Sign_up">Sign up</button>
+                <button class="btn-mint" data-modal-target="Sign_In">Login</button>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-toggle" class="lg:hidden flex flex-col gap-1">
+                <span class="w-6 h-0.5 bg-black"></span>
+                <span class="w-6 h-0.5 bg-black"></span>
+                <span class="w-6 h-0.5 bg-black"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex-col bg-white px-6 py-4 lg:hidden">
+            <ul class="flex flex-col items-center gap-4">
+                <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">Discover</a></li>
+                <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">About Us</a></li>
+                <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">Pricing</a></li>
+                <li><a href="#" class="text-sm font-medium text-primary-black hover:text-[#485455]">Affiliate</a></li>
+            </ul>
+            <div class="flex flex-col gap-3 mt-4">
+                <button class="btn-outline" data-modal-target="Sign_up">Sign up</button>
+                <button class="btn-mint" data-modal-target="Sign_In">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero w-full h-auto pt-[72px] lg:h-auto">
+        <div
+            class="w-full h-auto max-w-[1460px] rounded-3xl mx-auto bg-linear-to-b from-[#EAF1F1] to-white/0 py-8  lg:py-[150px] px-6 lg:px-[160px]">
+            <!-- left part  -->
+            <div class="w-full h-full max-w-[600px] flex flex-col items-center mx-auto justify-center">
+                <!-- badge  -->
+                <div
+                    class="py-2 pl-[13px] pr-[18px] w-max mb-6 flex items-center gap-2 bg-white rounded-full shadow-[0_0_10px_0_rgba(23,23,35,0.04)] max-lg:mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                        <circle cx="4" cy="4" r="4" fill="#0AF573" />
+                    </svg>
+                    <p class="text-xs font-medium leading-[18px] text-[#002225] ">
+                        Partner with Flowbase
+                    </p>
+                </div>
+                <h1
+                    class="text-[58px] text-center font-medium leading-[76px] tracking-[-2px] text-[#002225]">
+                    Become our affiliate partner & grow with us.
+                </h1>
+                <p
+                    class="text-base leading-[26px] text-[#6B7280] mt-3.5 mb-[34px] w-full max-w-[531px] max-lg:mx-auto text-center">
+                  Transform Your Workflow with Our Premium Figma, Webflow, & Framer
+Components. Build Better, Faster
+                </p>
+                <div class="flex items-center gap-3.5 mb-12 max-lg:justify-center">
+                    <button
+                        class="py-3.5 px-5 rounded-lg bg-[#004046] text-base font-medium leading-5 text-[#0CF279] transition-all duration-500 hover:bg-[#05575f]">Apply to be a Partner</button>
+                    
+                </div>
+             
+            </div>
+            <div class="flex flex-col items-center gap-[56px] mt-8 lg:mt-[120px]">
+                <div class="flex flex-col items-center gap-4">
+                    <h2 class="text-[54px] text-center font-medium leading-[65px] tracking-[-2px] text-[#002225]">Join us as a partner?</h2>
+                    <p
+                    class="text-xl leading-[26px] text-[#6B7280] max-w-[780px] w-full text-center">
+                 We create high-quality tools for Webflow, Framer, and Figma users. Share mintwint with your audience and earn effortless recurring income.
+                </p>
+                </div>    
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-8 gap-4">
+                    
+                    <div class="group bg-[linear-gradient(125deg,rgba(234,241,241,0.30)_0%,rgba(234,241,241,0.30)_100%)]  rounded-[10px] p-6 flex flex-col gap-4 cursor-pointer">
+                        <div class="w-[54px] h-[54px] bg-white rounded-xl flex justify-center items-center transition-all duration-500 group-hover:bg-[#0CF279]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M17.5 8.62963C17.5 6.62504 15.0376 5 12 5C8.96243 5 6.5 6.62504 6.5 8.62963C6.5 10.6342 8 11.7407 12 11.7407C16 11.7407 18 12.7778 18 15.3704C18 17.963 15.5 19 12 19C8.5 19 6 17.5 6 15.5" stroke="#002225" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M12 3V21" stroke="#002225" stroke-width="1.6" stroke-linecap="round"/>
+</svg>
+                        </div>
+                         <div class="flex flex-col gap-2">
+                        <h4 class="text-base font-medium leading-5 text-[#002225]">Get 20% for every referral</h4>
+                        <p class="text-xs font-normal text-[#6B7280]">Earn a recurring 20% commission for every referral you send our way.</p>
+                    </div>
+                    </div>
+                    <div class="group bg-[linear-gradient(125deg,rgba(234,241,241,0.30)_0%,rgba(234,241,241,0.30)_100%)]  rounded-[10px] p-6 flex flex-col gap-4 cursor-pointer">
+                        <div class="w-[54px] h-[54px] bg-white rounded-xl flex justify-center items-center transition-all duration-500 group-hover:bg-[#0CF279]">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M7 17V13M12 17V7M17 17V11" stroke="#002225" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21.5 4.5V19.5C21.5 20.6046 20.6046 21.5 19.5 21.5H4.5C3.39543 21.5 2.5 20.6046 2.5 19.5V4.5C2.5 3.39543 3.39543 2.5 4.5 2.5H19.5C20.6046 2.5 21.5 3.39543 21.5 4.5Z" stroke="#002225" stroke-width="1.6" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                         <div class="flex flex-col gap-2">
+                        <h4 class="text-base font-medium leading-5 text-[#002225]">Ongoing passive earnings</h4>
+                        <p class="text-xs font-normal text-[#6B7280]">Create a simple stream of passive income.</p>
+                    </div>
+                    </div>
+                    <div class="group bg-[linear-gradient(125deg,rgba(234,241,241,0.30)_0%,rgba(234,241,241,0.30)_100%)]  rounded-[10px] p-6 flex flex-col gap-4 cursor-pointer">
+                        <div class="w-[54px] h-[54px] bg-white rounded-xl flex justify-center items-center transition-all duration-500 group-hover:bg-[#0CF279]">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M7 20.5H3C2.44771 20.5 2 20.0522 2 19.5V11.5C2 10.9477 2.44772 10.5 3 10.5H7" stroke="#002225" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17.9477 20.5H7V10.5L13.9158 3.5L13.9867 3.5718C15.432 5.0347 15.8379 7.24748 15.0078 9.13802L14.4098 10.5H20.0224C21.3836 10.5 22.3371 11.8603 21.8874 13.1607L19.8127 19.1607C19.5353 19.9628 18.7874 20.5 17.9477 20.5Z" stroke="#002225" stroke-width="1.6" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                         <div class="flex flex-col gap-2">
+                        <h4 class="text-base font-medium leading-5 text-[#002225]">No cost to join</h4>
+                        <p class="text-xs font-normal text-[#6B7280]">Joining our affiliate program is completely free with no requirements.</p>
+                    </div>
+                    </div>
+                   
+                     <div class="group bg-[linear-gradient(125deg,rgba(234,241,241,0.30)_0%,rgba(234,241,241,0.30)_100%)]  rounded-[10px] p-6 flex flex-col gap-4 cursor-pointer">
+                        <div class="w-[54px] h-[54px] bg-white rounded-xl flex justify-center items-center transition-all duration-500 group-hover:bg-[#0CF279]">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M9 4.5C5.50442 5.70104 3 8.94175 3 12.7511C3 13.9579 3.25134 15.1076 3.70591 16.1534M15 4.5C18.4956 5.70104 21 8.94175 21 12.7511C21 13.7736 20.8195 14.7552 20.4879 15.6674M16.5 20.3296C15.1762 21.074 13.6393 21.5 12 21.5C10.3607 21.5 8.82378 21.074 7.5 20.3296" stroke="#002225" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M15 5C15 6.65685 13.6569 8 12 8C10.3431 8 9 6.65685 9 5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5Z" stroke="#002225" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M5 22C6.65685 22 8 20.6569 8 19C8 17.3431 6.65685 16 5 16C3.34315 16 2 17.3431 2 19C2 20.6569 3.34315 22 5 22Z" stroke="#002225" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M19 22C20.6569 22 22 20.6569 22 19C22 17.3431 20.6569 16 19 16C17.3431 16 16 17.3431 16 19C16 20.6569 17.3431 22 19 22Z" stroke="#002225" stroke-width="1.6" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                         <div class="flex flex-col gap-2">
+                        <h4 class="text-base font-medium leading-5 text-[#002225]">Earn simply by sharing</h4>
+                        <p class="text-xs font-normal text-[#6B7280]">Team up with a product that continues to grow and improve.</p>
+                    </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+           
+           
+        </div>
+    </div>
+   
+
+    <footer
+        class=" relative w-full  pt-28">
+       
+        <div class="bg-[#F4F7F7] rounded-b-[24px] flex flex-col items-center  md:px-0 px-4 pb-0 relative">
+             <div class="w-full max-w-7xl mx-auto py-14 relative rounded-[18px] bg-[#002225] overflow-hidden z-10 mt-[-120px]">
+            <div class="absolute -top-1/3 left-[180px] w-28 h-28 bg-[#0CF279] blur-[60px]"></div>
+            <div class="w-full max-w-[1204px] px-4 lg:px-8 mx-auto">
+                <div class="flex items-center flex-col min-[790px]:flex-row max-md:gap-8 md:justify-between">
+                    <div class="max-[790px]:w-full">
+                        <h2
+                            class="text-[44px] leading-[54px] font-medium text-white mb-4  max-[790px]:text-center max-[790px]:mx-auto">
+                            Unlock<span class="text-[#0CF279] font-bold "> PRO</span> features today <br>
+                            & speed up your workflow</h2>
+                    </div>
+                    <div class="flex flex-col min-[790px]:items-end">
+                        <a href="https://mintwint.com/"
+                            class="py-3.5 px-6 whitespace-nowrap rounded-lg bg-[#0CF279] text-primary-black text-base font-medium leading-5 transition-all duration-500 hover:bg-[#0adf6d]">Become
+                            a PRO
+                        </a>
+                        <p class="mt-1.5 text-sm leading-[18px] text-white text-right">
+                            Create your website in minutes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div
+                class="flex flex-col lg:flex-row max-lg:gap-8 items-start lg:justify-between w-full max-w-xl lg:max-w-6xl mx-auto pt-14">
+                <div class="w-full lg:max-w-[300px]">
+                    <a href="https://mintwint.com/" class="!w-max max-sm:mx-auto flex">
+                        <svg width="176" height="46" viewBox="0 0 176 46" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M70.2629 16.2052C73.8259 16.2052 76.2223 18.7056 76.2223 22.7127V32.6502H72.8169V22.9371C72.8169 20.6931 71.6187 19.4429 69.7584 19.4429C67.7404 19.4429 66.3215 20.7572 66.3215 23.6744V32.6502H62.9161V22.9371C62.9161 20.6931 61.8125 19.4429 59.9522 19.4429C58.0288 19.4429 56.4522 20.7572 56.4522 23.6744V32.6502H53.0469V16.622H56.4522V18.5454C57.4612 16.9746 59.0063 16.2052 60.9612 16.2052C63.0107 16.2052 64.5242 17.1349 65.4386 18.7377C66.4792 17.0708 68.1503 16.2052 70.2629 16.2052Z"
+                                fill="#002225" />
+                            <path
+                                d="M81.5695 14.2177C80.3714 14.2177 79.3939 13.1919 79.3939 12.0058C79.3939 10.7877 80.3714 9.79395 81.5695 9.79395C82.7677 9.79395 83.7452 10.7877 83.7452 12.0058C83.7452 13.1919 82.7677 14.2177 81.5695 14.2177ZM79.8669 32.6502V16.622H83.2722V32.6502H79.8669Z"
+                                fill="#002225" />
+                            <path
+                                d="M95.5189 16.2052C99.0504 16.2052 101.573 18.6415 101.573 22.8089V32.6502H98.1675V23.1615C98.1675 20.7252 96.7801 19.4429 94.636 19.4429C92.3973 19.4429 90.6316 20.7893 90.6316 24.0591V32.6502H87.2262V16.622H90.6316V18.6736C91.6721 17.0066 93.3748 16.2052 95.5189 16.2052Z"
+                                fill="#002225" />
+                            <path
+                                d="M114.037 19.9558H110.127V27.6494C110.127 29.701 111.451 29.6689 114.037 29.5407V32.6502C108.803 33.2913 106.722 31.8167 106.722 27.6494V19.9558H103.821V16.622H106.722V13.1599L110.127 12.1341V16.622H114.037V19.9558Z"
+                                fill="#002225" />
+                            <path
+                                d="M135.441 16.622H139.036L134.085 32.6502H130.743L127.464 21.8472L124.153 32.6502H120.811L115.86 16.622H119.455L122.514 27.6814L125.824 16.622H129.072L132.351 27.6814L135.441 16.622Z"
+                                fill="#002225" />
+                            <path
+                                d="M143.246 14.2177C142.048 14.2177 141.071 13.1919 141.071 12.0058C141.071 10.7877 142.048 9.79395 143.246 9.79395C144.444 9.79395 145.422 10.7877 145.422 12.0058C145.422 13.1919 144.444 14.2177 143.246 14.2177ZM141.544 32.6502V16.622H144.949V32.6502H141.544Z"
+                                fill="#002225" />
+                            <path
+                                d="M157.196 16.2052C160.727 16.2052 163.25 18.6415 163.25 22.8089V32.6502H159.844V23.1615C159.844 20.7252 158.457 19.4429 156.313 19.4429C154.074 19.4429 152.308 20.7893 152.308 24.0591V32.6502H148.903V16.622H152.308V18.6736C153.349 17.0066 155.051 16.2052 157.196 16.2052Z"
+                                fill="#002225" />
+                            <path
+                                d="M175.714 19.9558H171.804V27.6494C171.804 29.701 173.128 29.6689 175.714 29.5407V32.6502C170.479 33.2913 168.398 31.8167 168.398 27.6494V19.9558H165.497V16.622H168.398V13.1599L171.804 12.1341V16.622H175.714V19.9558Z"
+                                fill="#002225" />
+                            <path
+                                d="M0 8.1481C0 3.64803 3.64803 0 8.1481 0H37.8519C42.352 0 46 3.64803 46 8.1481V37.8519C46 42.352 42.352 46 37.8519 46H8.1481C3.64803 46 0 42.352 0 37.8519V8.1481Z"
+                                fill="#004046" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M31.1347 12.6842L24.0222 19.7968V9.89746C26.6981 10.1039 29.149 11.1129 31.1347 12.6842ZM21.9754 9.89746V21.8436L12.703 31.1159C10.9334 28.8796 9.87695 26.0532 9.87695 22.98C9.87695 16.0774 15.2067 10.4196 21.9754 9.89746ZM14.0948 32.6187C16.4341 34.7808 19.5622 36.1019 22.9988 36.1019C27.6689 36.1019 31.7693 33.6622 34.0947 29.9877H16.7258L14.0948 32.6187ZM35.1505 27.9409H18.7726L32.6375 14.076C34.7996 16.4153 36.1207 19.5434 36.1207 22.98C36.1207 24.7355 35.7759 26.4105 35.1505 27.9409Z"
+                                fill="#0CF279" />
+                        </svg>
+                    </a>
+                    <p class="mt-5 mb-5 text-base leading-6 text-primary-black max-sm:text-center">
+                        At Mintwint, we specialize in providing high-quality components and blocks for Figma, Framer,
+                        and Webflow.
+                    </p>
+                    <a href="https://mintwint.com/components" class="btn-mint py-2.5 px-5 w-max max-sm:mx-auto flex">Try mintwint now</a>
+                </div>
+                <div
+                    class="w-full lg:max-w-[646px] lg:pl-[30px] flex flex-col sm:flex-row items-center sm:items-start max-sm:gap-6 sm:justify-between">
+                    <ul class="flex max-sm:justify-center max-sm:items-center flex-col gap-[18px]">
+                        <li class="text-base leading-5 font-medium text-[#333333]">Product</li>
+                        <li><a href="https://mintwint.com/components"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Webflow Components</a>
+                        </li>
+                        <li><a href="https://mintwint.com/components"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Framer Components</a>
+                        </li>
+                        <li><a href="https://mintwint.com/components"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Figma Components
+                                </a></li>
+                        <li><a href="https://mintwint.com/change-log"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Changelog</a></li>
+                        <li><a href="javascript:;"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Templates <span class="bg-[#004046] text-xs text-[#0af573] py-0.5 px-1 rounded-full">Coming Soon</span></a></li>
+                                
+                        <li><a href="https://mintwint.com/how-to-use"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">How
+                                to use</a></li>
+                        <li><a href="https://mintwint.com/pricing"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Pricing
+                                & FAQ</a></li>
+                    </ul>
+                    <ul class="flex max-sm:justify-center max-sm:items-center flex-col gap-[18px]">
+                        <li class="text-base leading-5 font-medium text-[#333333]">Company</li>
+                        <li><a href="https://mintwint.com/about-us"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">About
+Us</a>
+                        </li>
+                        <li><a href="https://mintwint.com/contact-us"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Contact
+                                & Support</a></li>
+                        <li><a href="https://mintwint.com/license-aggreement"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">License</a>
+                        </li>
+                        <li><a href="https://mintwint.com/term-of-service"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Terms
+                                of Service</a></li>
+                        <li><a href="https://mintwint.com/privacy-policy"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Privacy
+                                Policy</a></li>
+
+                    </ul>
+                    <ul class="flex max-sm:justify-center max-sm:items-center flex-col gap-[18px]">
+                        <li class="text-base leading-5 font-medium text-[#333333]">Community</li>
+                       
+                        <li><a href="https://mintwint.com/component-request"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Request
+                                Components</a></li>
+                      
+                       
+                        <li><a href="https://x.com/mintwinthq"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Twitter</a>
+                        </li>
+                         <li><a href="ttps://discord.gg/GvW5z25ppK"
+                                class="text-sm leading-5 text-semi-black transition-all duration-500 hover:text-primary-black max-sm:text-center">Discord</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full  relative pt-[50px]">
+                <img src="assets/images/mintwint-text.png" alt="" class="md:max-w-7xl mx-auto md:translate-y-0 -translate-y-2 max-w-full w-full">
+                <p
+                    class="w-full text-center py-[5px] text-xs leading-5 text-primary-black bg-white absolute bottom-0 left-0 z-10">
+                    © 2024 mintwint. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- <script src="assets/js/jquery-min.js"></script> -->
+    <!-- <script src="assets/js/main.js"></script> -->
+    <script src="assets/js/accordion.js"></script>
+    <!-- navbar  -->
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            mobileMenu.classList.toggle("flex");
+        });
+    </script>
+    <!-- h1 animations  -->
+    <script>
+        $(function () {
+            $("#text").typed({
+                strings: ["Webflow", "Framer", "Figma"],
+                typeSpeed: 50,
+                backSpeed: 20,
+                backDelay: 2000,
+                showCursor: true,
+                loop: true
+            });
+        });
+    </script>
+    <!-- hero slider  -->
+    <script>
+        var swiper = new Swiper(".hero-slider", {
+            spaceBetween: 30,
+
+            speed: 1000,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            on: {
+                slideChangeTransitionStart: function () {
+                    // reset all images
+                    document.querySelectorAll(".slide-img").forEach((img) => {
+                        img.style.opacity = "0";
+                        img.style.transform = "translateX(400px)";
+                        img.style.transition = "none"; // reset transition
+                    });
+
+                    // get current active slide
+                    const activeSlide = this.slides[this.activeIndex];
+                    const images = activeSlide.querySelectorAll(".slide-img");
+
+                    // animate in with staggered delay
+                    images.forEach((img, i) => {
+                        img.style.transition = `opacity 600ms ease-in-out ${i * 300}ms, transform 600ms ease-in-out ${i * 300}ms`;
+                        // trigger animation
+                        setTimeout(() => {
+                            img.style.opacity = "1";
+                            img.style.transform = "translateX(0px)";
+                        }, 50);
+                    });
+                },
+            },
+        });
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <!-- tag animations  -->
+    <script>
+        // Position them initially
+        gsap.set("#mark-tag", { x: -80, y: 50, opacity: 0 });
+        gsap.set("#rubi-tag", { x: 40, y: -30, opacity: 0 });
+
+        // Entrance animations
+        gsap.to("#mark-tag", {
+            x: -50,
+            y: 300,
+            opacity: 1,
+            duration: 1,
+            ease: "power3.out"
+        });
+
+        gsap.to("#rubi-tag", {
+            x: 120,
+            y: -150,
+            opacity: 1,
+            duration: 1,
+            ease: "power3.out",
+            delay: 0.5
+        });
+
+        // Floating loop
+        gsap.to("#mark-tag", {
+            y: "-=25",
+            duration: 4,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        gsap.to("#rubi-tag", {
+            y: "+=35",
+            x: "+-80",
+            duration: 4.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+    </script>
+    <!-- tab  -->
+    <script>
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabButtons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                // Reset all buttons
+                tabButtons.forEach((b) => b.classList.remove("active"));
+                // Hide all contents
+                tabContents.forEach((c) => c.classList.add("hidden"));
+
+                // Activate clicked tab
+                btn.classList.add("active");
+                document.getElementById(btn.dataset.tab).classList.remove("hidden");
+            });
+        });
+    </script>
+</body>
+
+</html>
